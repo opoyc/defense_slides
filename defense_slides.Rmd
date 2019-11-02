@@ -8,10 +8,10 @@ author: |
 output:
   xaringan::moon_reader:
       css: 
-          - "css/default.css"
-          - "css/opoyc-fonts.css"
-          - "css/opoyc.css"
-          - "css/visiting_image.css"
+          #- "css/default.css"
+          - "css/defense_slides-fonts.css"
+          - "css/defense_slides.css"
+          #- "css/visiting_image.css"
           # - "css/animate.css"
       lib_dir: libs
       nature:
