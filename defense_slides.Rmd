@@ -4,26 +4,23 @@ title: |
 author: |
   Obryan Poyser Calderón\
   UAB - Department of Applied Economics \
-  2019-12-x
+  Updated: `r Sys.Date()`
 output:
   xaringan::moon_reader:
-      css: 
-          #- "css/default.css"
-          - "css/defense_slides-fonts.css"
-          - "css/defense_slides.css"
-          #- "css/visiting_image.css"
-          # - "css/animate.css"
-      lib_dir: libs
-      nature:
-        highlightStyle: github
-        highlightLines: true
-        countIncrementalSlides: false
-        slideNumberFormat:  |
-            <div class="progress-bar-container">
-              <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
-              </div>
-            </div>`
-        ratio: "16:9"
+    css:
+      - "css/defense_slides-fonts.css"
+      - "css/defense_slides.css"
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat:  |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>`
+      ratio: "16:9"
 ---
 
 ```{r setup, include=FALSE}
@@ -58,15 +55,16 @@ class: inverse, center, middle
 # Motivation
 
 ---
-class: left, middle
+class: left
 
-## Previous work:
+# Thesis contents
 
-Title: [Exploring the dynamics of Bitcoin Price: A Bayesian Structural Time Series Approach](https://link.springer.com/article/10.1007/s40822-018-0108-2)
-
-Objective: Determine which are the drivers that explain Bitcoin’s price
-
-Methodology: State space model to account for dynamic behavior and variable selection
+1. Exploring the dynamics of Bitcoin Price: A Bayesian Structural Time Series Approach.
+> Elicits cryptocurrencies in light of economic minset. The approach includes a discussion about its "currency" denomination, nonetheless, is an exploratory study in general terms.
+1. Investors’ biases and herding behavior in the cryptocurrency market.
+> Posits behavioral economics principles to explain cryptocurrencies' price dynamics.
+1. Attention, meta-information and behavioral convergence in cryptocurrency markets: A SVAR analysis
+> Proposes a structural form about information feedback that molds cryptocurrency markets.
 
 ---
 class: left, middle

@@ -1,7 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=VT323);
 
-body { font-family: "Lato", "Yanone Kaffeesatz", 'Palatino Linotype', 'Book Antiqua', "Palatino", 'Microsoft YaHei', 'Songti SC', serif; }
-h1, h2, h3 {font-family: "Yanone Kaffeesatz"; }
+body { font-family: "Ubuntu", "Merriweather", "Roboto Slab", "Yanone Kaffeesatz"
+    , 'Palatino Linotype', 'Book Antiqua', "Palatino", 'Microsoft YaHei', 'Songti SC', serif;}
+h1, h2, h3 {font-family: "Ubuntu"; }
 .remark-code, .remark-inline-code { font-family: 'Yanone Kaffeesatz', 'Lucida Console', Monaco, monospace; color: #88398A}
