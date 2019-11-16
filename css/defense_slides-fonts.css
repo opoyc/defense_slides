@@ -3,8 +3,14 @@
 @import url('https://fonts.googleapis.com/css?family=Inconsolata:400,700');
 @import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
 @import url(https://fonts.googleapis.com/css?family=VT323);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@import url(https://fonts.googleapis.com/css?family=Titillium+Web);
 
-body { font-family: "Ubuntu", "Merriweather", "Roboto Slab", "Yanone Kaffeesatz"
+
+
+body { font-family:'Titillium Web', "Roboto Slab", "Ubuntu", "Merriweather", "Yanone Kaffeesatz"
     , 'Palatino Linotype', 'Book Antiqua', "Palatino", 'Microsoft YaHei', 'Songti SC', serif;}
-h1, h2, h3 {font-family: "Ubuntu"; }
+h1, h2, h3 {font-family: 'Titillium Web', sans-serif;}
 .remark-code, .remark-inline-code { font-family: 'Yanone Kaffeesatz', 'Lucida Console', Monaco, monospace; color: #88398A}
