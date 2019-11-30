@@ -140,9 +140,9 @@ a, a > code {
 }
 
 li, p {
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 .remark-slide-content {
-  font-size: 22px;
+  font-size: 20px;
 }

@@ -31,7 +31,6 @@ output:
 options(htmltools.dir.version = FALSE)
 ```
 
----
 ## Outline
 
 1. Motivation
@@ -44,16 +43,115 @@ options(htmltools.dir.version = FALSE)
 ---
 ## Thesis contents
 
-1. Exploring the dynamics of Bitcoin Price: A Bayesian Structural Time Series Approach.
+Chapter I - Exploring the dynamics of Bitcoin Price: A Bayesian Structural Time Series Approach.
 > Elicits cryptocurrencies in light of economic minset. The approach includes a discussion about its "currency" denomination, nonetheless, is an exploratory study in general terms.
-1. Investors’ biases and herding behavior in the cryptocurrency market.
+
+Chapter II - Investors’ biases and herding behavior in the cryptocurrency market.
+
 > Posits behavioral economics principles to explain cryptocurrencies' price dynamics.
-1. Attention, meta-information and behavioral convergence in cryptocurrency markets: A SVAR analysis
+
+Chapter III - Attention, meta-information and behavioral convergence in cryptocurrency markets: A SVAR analysis
 > Provide a conceptual framework to understand investing decision-making in cryptocurrency markets. Emphasize in three traits: attention-grabbing, behavioral convergence (herding) and response to uncertainty.
 
 ---
-class: left, middle
+class: center, middle
 
+## Chapter I - Exploring the dynamics of Bitcoin Price: A Bayesian Structural Time Series Approach.
+
+---
+
+## Background
+
+- **What is Bitcoin?**: _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
+  - _... a set of technologies that established the framework to interchange money named bitcoins through a decentralized peer-to-peer network named Blockchain_ (Astonopoulos, 2014).
+
+- _“...a commodity money without gold, fiat money without state, and credit money without debt” _(Bjerg, 2016).
+
+- **What is an Altcoin?**: Stands for "alternative coin", refers to other digital/crypto-currencies different from Bitcoin
+
+- There are more than **2100** different cryptocurrencies.
+
+Problems?
+
++ _it lacks intrinsic value, long verification process of the transactions and high volatility._ (Yermack, 2013).
+
++ _Bitcoin is a speculative asset_ (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
+
+---
+
+### Objectives
+
++ Determine which are the drivers that explain Bitcoin's price between January 2013 and May 2017
++ Account for the heterogeneity of the interest over time for Bitcoin across countries
+
+### Contribution
+
++ Time-varying coefficients
++ A geographic perspective of attraction based on multiple Google trends time series data
++ Bayesian variable selection of the drivers based on data-driven approach known as Spike and Slab
+
+### Limitations
+
++ The cryptographic platform (Blockchain) where it works only let to make guesses about the drivers
++ Literature is limited
++ Limited computational power
+    + It is needed up to 2.5gb of RAM per model object
+    + Estimation can take several hours
+
+---
+## Data
+
+Target
+
+- Bitcoin daily closing price
+
+Internal factors
+
+- USD exchange trade volume
+- Median confirmation time for a block to be accepted
+- Hash rate that measures the power of miner’s machines.
+- Number of transactions excluding the 100 most popular addresses.
+
+External factors
+
+- Attractiveness
+  - Google trends: Weekly search queries index for “bitcoin” from 27 different countries.
+     - Varies across countries: Dynamic time warping dissimilarity algorithm
+- Macro-financial
+  - S\&P500 index: Indicator of the performance of a group of relevant stock market companies
+  - Chicago Board Options Exchange (CBOE) Volatility Index (VIX)
+  - Bearish sentiment from the AAII Investor Sentiment Survey
+  - Gold’s price
+  - Exchanges rate of the euro with the dollar (EURO-USD), dollar with the yuan (USD-YUAN)
+---
+
+## Methodology
+
+> Structural time series (Space state model) consists of two equations: a measurement equation which links the observed variables to unobserved state variables and a transition equation which describes the dynamics of the state variables
+
+
+&nbsp;
+
+Observation/measurement equation:
+
+$$
+y_t=Z_t^T\alpha_t+\varepsilon_t \qquad \varepsilon_t \sim N(0, H_t)
+$$
+
+&nbsp;
+Transition/state equation:
+$$
+\alpha_{t+1}=T_t\alpha_t+R_t\eta_t \qquad \eta_t \sim N(0, Q_t)
+$$
+
+&nbsp;
+
+- $y_t$: vector of observations (observation vector)
+- $\alpha_t$: unobserved vector (state vector)
+- $Z_t,\, H_t,\,T_t,\, R_t, Q_t$: structural parameters' matrices
+- $\varepsilon_t,\,\eta_t$: serially and mutually independent errors
+
+---
 
 .pull-left[
 ```{r, echo=F, fig.align="center", fig.cap="Group of drivers", out.width="100%"}
@@ -128,17 +226,6 @@ class: middle, inverse, center
 # Background
 
 ---
-## Basic info
-
-- **What is Bitcoin?**: _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
---
-
-- **What is an Altcoin?**: Stands for "alternative coin", refers to other digital/crypto-currencies different from Bitcoin
---
-
-- There are more than **2100** different cryptocurrencies.
-
---
 
 ### Currencies, investing or gambling?
 
@@ -789,6 +876,10 @@ class: center, middle
 
 # Objectives
 
+1. Integrate the insights from the 2 previous chapters.
+1. Propose a proxy to measure behavioral convergency in the cryptocurrency market.
+1. Approximate a causal interpretation on the relationship across the relevant elements of cryptomarket system.
+
 ---
 
 # Background
@@ -798,11 +889,41 @@ class: center, middle
 1. Searching problem is solved by investing in attention-grabbing stocks.
   1. Abnormal trading volume.
   1. Extreme one day returns.
-1. Bitcoin plays a dual role, first as a complex amalgam of a currency and an asset, and secondly as a meta-informational input to convey trust.
-  1. Trust is a proxy for loss-aversion
+1. Bitcoin plays a dual role, first it is an amalgam of a currency and an asset, and secondly as a meta-informational input to convey trust to the entire "cryptomarket".
+  1. Trust is a proxy for loss-aversions
 1. cues $\rightarrow$ reaction $\rightarrow$ strategy $\rightarrow$ cues 
 
+---
+
+# Results
+
+---
+
+```{r, echo = FALSE, fig.cap="Cumulative impulse response function (IRF) for VAR of Bitcoin's returns (BTC) to the rest of the variables in the system", out.width="90%", fig.align='center'}
+knitr::include_graphics("img/irf_btc.png")
+```
+
+---
 
 
+```{r, echo = FALSE, fig.align='center', out.width="90%", fig.cap="Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system"}
+knitr::include_graphics("img/irf_att.png")
+```
 
+---
 
+```{r, echo = FALSE, fig.align='center', out.width="90%", fig.cap="Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system"}
+knitr::include_graphics("img/irf_btcv.png")
+```
+
+---
+
+```{r, echo = FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/irf_hind.png")
+```
+
+---
+
+```{r, echo = FALSE, fig.align='center', out.width="90%"}
+knitr::include_graphics("img/irf_hinu.png")
+```

@@ -1,0 +1,365 @@
+---
+title: "Exploring the dynamics of Bitcoin's price: a Bayesian structural time series approach"
+author: |
+   | Obryan Poyser^[email: [obryan.poyser@uab.cat](mailto:obryan.poyser@uab.cat) | web: [opoyc.github.io](https://opoyc.github.io/)]
+   | Universitat Autònoma de Barcelona
+institute: "23rd Eurasia Business and Economics Society Conference"
+date: "September 29, 2017"
+fontsize: 8pt
+# linestretch: 1.5
+output:
+  beamer_presentation:
+       fig_width: 10
+       fig_height: 6
+       theme: "Frankfurt"
+       # boxes "Frankfurt"
+       colortheme: "dolphin"
+       fonttheme: "professionalfonts"
+       slide_level: 2
+       keep_tex: true
+       template: template_beamer_mod.tex
+navigation: horizontal
+---
+
+[1]:
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Background
+## Bitcoin and the distributed ledger Blockchain
+
+What is Bitcoin?
+
++ _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
+
++ _... a set of technologies that established the framework to interchange money named bitcoins through a decentralized peer-to-peer network named Blockchain_ (Astonopoulos, 2014).
+
++ _“...a commodity money without gold, fiat money without state, and credit money without debt” _(Bjerg, 2016).
+
++ **"Bitcoin is evil"** (Krugman, 2013)
+
+Problems?
+
++ _it lacks intrinsic value, long verification process of the transactions and high volatility._ (Yermack, 2013).
+
++ _Bitcoin is a speculative asset_ (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
+
+
+***
+
+## Related work
+
++ Google Trends and Twitter data _(Yelowitz and Wilson, 2015; Kaminski, 2014)._
+
++ Social activity in cryptocurrencies communities and constructed a sentiment analysis index to explain Bitcoin, Ethereum, and Ripple cryptocurrencies' prices _(Ciaian, Rajcaniova & D. Kancs 2016; Dwyer 2015; Kim et al. 2016)._
+
++ Examined the role of Bitcoin as a potential hedge or safe-haven asset by comparing with precious metals and financial indexes. _(Kristoufek, 2015; Bouoiyour & Selmi, 2016a; and Bouri, Gupta, Tiwari, & Roubaud, 2017)._
+
++ Tested Bitcoin's tendency to generate speculative bubbles. _(Cheah & Fry, 2015 and Baek & Elbeck, 2014)._
+
+
+# Objectives, contribution and limitations
+## Objetives
+
+Objectives
+
++ Determine which are the drivers that explain Bitcoin's price between January 2013 and May 2017
++ Account for the heterogeneity of the interest over time for Bitcoin across countries
+
+Contribution
+
++ Time-varying coefficients
++ A geographic perspective of attraction based on multiple Google trends time series data
++ Bayesian variable selection of the drivers based on data-driven approach known as Spike and Slab
+
+Limitations
+
++ The cryptographic platform (Blockchain) where it works only let to make guesses about the drivers
++ Literature is limited
++ Limited computational power
+    + It is needed up to 2.5gb of RAM per model object
+    + Estimation can take several hours
+
+# Data
+## Data
+
+Target
+
++ Bitcoin daily closing price
+
+Internal factors
+
++ USD exchange trade volume
++ Median confirmation time for a block to be accepted
++ Hash rate that measures the power of miner’s machines.
++ Number of transactions excluding the 100 most popular addresses.
+
+External factors\label{external-factors}
+
++ Attractiveness
+      + Google trends: Weekly search queries index for “bitcoin” from 27 different countries.
+         + Varies across countries: Dynamic time warping dissimilarity algorithm \hyperlink{cluster}{\beamerbutton{Cluster}}     \hyperlink{clusts}{\beamerbutton{Clustered series}}
++ Macro-financial
+      + S\&P500 index: Indicator of the performance of a group of relevant stock market companies
+      + Chicago Board Options Exchange (CBOE) Volatility Index (VIX)
+      + Bearish sentiment from the AAII Investor Sentiment Survey
+      + Gold’s price
+      + Exchanges rate of the euro with the dollar (EURO-USD), dollar with the yuan (USD-YUAN)
+
+ > In total this study used 42 explanatory variables
+
+# Methodology
+
+## Structural time series
+
+
+\begin{block}{Space state model}
+Consists of two equations, a measurement equation which links the observed variables to unobserved state variables and a transition equation which describes the dynamics of the state variables
+\end{block}
+
+Observation/measurement equation:\label{sts_method}
+
+$$
+y_t=Z_t^T\alpha_t+\varepsilon_t \qquad \varepsilon_t \sim N(0, H_t)
+$$
+
+Transition/state equation:
+$$
+\alpha_{t+1}=T_t\alpha_t+R_t\eta_t \qquad \eta_t \sim N(0, Q_t)
+$$
+
+
+- $y_t$: vector of observations (observation vector)
+- $\alpha_t$: unobserved vector (state vector)
+- $Z_t,\, H_t,\,T_t,\, R_t, Q_t$: structural parameters' matrices
+- $\varepsilon_t,\,\eta_t$: serially and mutually independent errors
+
+\hyperlink{example_llt}{\beamergotobutton{Example LLT}}
+\hyperlink{btcts}{\beamerbutton{Decomposition of time series}}
+\hyperlink{mcmc_kf}{\beamergotobutton{MCMC and Kalman Filter}}
+
+***
+
+## Bayesian Spike and Slab variable selection
+
+\begin{block}{}\label{spikeandslab}
+The $\beta_j$ space is composed by mutually independent two-point mixture distribution made up of a uniform flat distribution (the slab) and a degenerate distribution at zero (the spike). \hyperlink{spikeslab}{\beamergotobutton{Spike \& Slab representation}}
+\end{block}
+
+$$
+\begin{array}{c}
+p(\beta_j|\gamma_j) \sim (1-\gamma_j)\:N(0, \tau_j^2)+\gamma_j\:N(0, c_j \tau_j^2)\qquad
+\footnote{George and McCulloch (1993, 1997)} \\
+p(\gamma_j)\sim Bernoulli(w_j)
+\end{array}
+$$
+
++ The idea behind S\&L is to zero out $\beta_j$ coefficients that are truly 0 by making their posterior mean values small.
+    + Small hypervariances $\tau_j^2$ sets $\gamma_j=0$ and asymptotically set the $\beta_j$ as 0
+    + Large values of $\tau_j^2$ or $c_j$ result into $\gamma_j=1$ and by extention generating a non-zero estimate of $\beta_j$.
+
++ **The choice of priors is often tricky, although empirical Bayes approaches can be used to deal with this issue** _(Chipman, George and Mc-Culloch, 2001)_.
+
+
+***
+
+## Model specification
+
+Observation/measurement equation:
+
+$$
+\begin{array}{lc}
+y^*_t=\mu_t+\sum_{j=1}^{p}\beta_{j,t}x^*_{j,t}+\varepsilon_{y^*, t} & \varepsilon_{y^*, t} \sim N(0, \sigma_{\varepsilon_{y^*}}^2)
+ \end{array}
+$$
+
+Transition/state equation:
+
+$$
+\begin{array}{lc}
+\mu_{t+1}=\mu_{t}+v_{t}+\varepsilon_{\mu, t} & \varepsilon_{\mu, t} \sim N(0, \sigma_{\varepsilon_{\mu}}^2) \\
+v_{t+1}=v_{t}+\varepsilon_{v, t} & \varepsilon_{v, t} \sim N(0, \sigma_{\varepsilon_{v}}^2) \\
+\beta_{j, t+1}=\beta_{j, t}+\varepsilon_{\beta_j, t} & \varepsilon_{\beta_j, t} \sim N(0, \sigma_{\varepsilon_{\beta}}^2)
+ \end{array}
+$$
+
+
+$$
+\frac{1}{\sigma^2}\sim \Gamma(\frac{s_1}{2}, \frac{s_2}{2})
+$$
+
++ $y^*_t$ a vector of standardized observations
++ $x^*_t$ a matrix of standardized variables
++ $\mu_t$ is the local level component
++ $v_t$ represents the angle of the trend line that also varies over time.
++ $\beta_{jt}$ represents the coefficients that vary (or not) over time
++ $\varepsilon_{c,t}$ represents the innovations for each component
+
+***
+
+## Methodological strategy
+
+![Methodological strategy diagram\label{methodstrag}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/diagram_steps.png)
+
+
+\hyperlink{sensitest}{\beamerbutton{Sensitivity test}}
+\hyperlink{empirical}{\beamerbutton{MCMC rounds}}
+
+
+
+# Results
+
+## Empirical priors
+
+![30 MCMC simulation rounds of 3000 iterations each](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/30_rseeds.png)
+
+***
+
+## Empirical priors
+
+![30 MCMC simulation rounds of 3000 iterations each](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/seeds/30_rseeds (another copy).png)
+
+***
+
+![30 MCMC simulation rounds of 3000 iterations each (zoom)](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/seeds/left_corner.png){width=90%}
+
+***
+
+![Densities for the commonly non-redundant variables](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/30rdensity1.png){width=110%, align=center}
+
+***
+
+## Time-invariant estimates
+
+![Time-invariant estimates for all variables)](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/g_all_var1 (copy).png)
+
+***
+
+## Attractiveness drivers
+
+![Non-zero probability time-varying attractiveness drivers](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/Rplot03.png){width=90%}
+
+***
+
+## Attractiveness drivers
+
+![Non-zero probability time-varying attractiveness drivers](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/time_var_attr_zoom_2.png){width=40%}
+
+***
+
+## Macro-financial drivers
+![Non-zero probability time-varying macrofinancial drivers](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/Rplot02.png){width=90%}
+
+***
+## Components' contribution to explain Bitcoin's price
+
+![Components' contribution](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/components2.png)
+
+
+# Conclusions
+## Conclusions
+
+1. Bitcoin represents an amalgam of attributes that demands a deeper meditation to understand its role in the contemporary economic scene
+1. None of the internal factors have a relevant impact on the price
+1. Yuan depreciation has been found to be associated with an increase on Bitcoin's price
+1. In terms of magnitude, macro-financial have higher effects than attractiveness suggesting that it does act as a speculative asset rather than a currency as many authors have stated
+
+***
+
+Thanks
+
+# Appendix
+
+## Local linear trend model (LLT)
+
+In linear form the LLT model is given by:\label{example_llt}
+
+$$
+\begin{array}{cc}
+y_t=\mu_t+\varepsilon_{y,t} & \varepsilon_{y,t} \sim N\left(0, \sigma_{\varepsilon_{y,t}}^2\right) \\
+\mu_{t+1}=\mu_t+v_t+\varepsilon_{\mu,t} & \varepsilon_{\mu, t} \sim N\left(0, \sigma_{\varepsilon_{\mu,t}}^2\right) \\
+v_{t+1}=v_t+\varepsilon_{v,t} & \varepsilon_{v, t} \sim N\left(0,\sigma_{\varepsilon_{v,t}}^2\right)
+\end{array}
+$$
+
+
+It can be translated to space state form as:
+
+\
+
+
+Observation/measurement equation:
+
+$$
+y_t=\underbrace{\begin{pmatrix} 1 & 0 \end{pmatrix}}_{Z_t} \: \underbrace{\begin{pmatrix} \mu_t \\ v_t \end{pmatrix}}_{\alpha_t} + \varepsilon_t
+$$
+Transition/state equation:
+$$
+\underbrace{\begin{pmatrix} \mu_{t+1} \\ v_{t+1} \end{pmatrix}}_{\alpha_{t+1}} = \underbrace{\begin{bmatrix} 1 & 1 \\ 0 & 1 \end{bmatrix}}_{T_t} \underbrace{\begin{pmatrix} \mu_{t} \\ v_{t} \end{pmatrix}}_{\alpha_t} + \underbrace{I_2}_{R_t}
+\underbrace{\begin{pmatrix} \varepsilon_{\mu,t} \\ \varepsilon_{v,t} \end{pmatrix}}_{\eta_t}
+$$
+
+\hyperlink{sts_method}{\beamerreturnbutton{Methodology}}
+
+***
+
+## Decomposition of time series
+
+![Decomposition of Bitcoin's price time series\label{btcts}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/3.png)
+
+\hyperlink{sts_method}{\beamerreturnbutton{Methodology}}
+
+***
+
+## MCMC and Kalman filter\label{mcmc_kf}
+
+\begin{block}{Kalman filter}
+The Kalman filter provides a recursive way to compute the estimator of the unobserved component based on the observed variables.
+\end{block}
+
+![Dependence structure of Kalman filter](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/kalman.png){width=60%}
+
+### Markov chain Monte Carlo methods (MCMC)\label{mcmc}
+
+Is a general method based on drawing values of $\alpha$ from approximate distributions and then correcting those draws to better approximate the target posterior distribution.
+
++ Gibbs sampling is used to identify posterior probabilities.
+
+***
+
+
+## Cluster of google trends
+
+![Cluster of google trends^[Dynamic time warping has been applied to find the optimal alignment and create a proper dissimilarity matrix for time dependent observations]\label{cluster}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/cluster_countries.png)
+
+\hyperlink{external-factors}{\beamerreturnbutton{External factors}}
+
+## Clustered time series for Google trends
+
+![Clustered time series for Google trends\label{clusts}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/1.1.png)
+
+\hyperlink{external-factors}{\beamerreturnbutton{External factors}}
+
+## Spike and slab distributions
+
+![Spike and slab distributions representations\label{spikeslab}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/Rplot13.png)
+
+\hyperlink{spikeandslab}{\beamerreturnbutton{Spike and Slab theory}}
+
+***
+
+## Marginal posterior distributions for 30 MCMC
+
+![Marginal posterior distributions for 30 MCMC\label{empirical}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/30rdensity_fil.png)
+
+\hyperlink{methodstrag}{\beamerreturnbutton{Methodological Strategy}}
+
+
+***
+## Sensitivity analysis
+
+![Sensitivity test\label{sensitest}](/mnt/E04ACAB04ACA8330/Users/opoys/Box Sync/AppEcon/Thesis/1st Research paper/Empirics/graphs/g_density1.png)
+
+\hyperlink{methodstrag}{\beamerreturnbutton{Methodological Strategy}}
