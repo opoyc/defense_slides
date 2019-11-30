@@ -29,17 +29,6 @@ a, a > code {
   float: right;
   padding-top: 1em;
 }
-.pull-left {
-  float: left;
-  width: 47%;
-}
-.pull-right {
-  float: right;
-  width: 47%;
-}
-.pull-right ~ * {
-  clear: both;
-}
 img, video, iframe {
   max-width: 100%;
 }
@@ -145,4 +134,25 @@ li, p {
 
 .remark-slide-content {
   font-size: 20px;
+}
+
+.middle {
+  vertical-align: middle;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 15%;
+}
+
+.pl {
+  float: left;
+  width: 49%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.pr {
+  float: right;
+  width: 49%;
+  height: 98%;
+  vertical-align: middle;
 }

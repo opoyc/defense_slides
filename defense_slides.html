@@ -53,25 +53,6 @@ class: center, middle
 
 ---
 
-## Background
-
-- **What is Bitcoin?**: _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
-  - _... a set of technologies that established the framework to interchange money named bitcoins through a decentralized peer-to-peer network named Blockchain_ (Astonopoulos, 2014).
-
-- _“...a commodity money without gold, fiat money without state, and credit money without debt” _(Bjerg, 2016).
-
-- **What is an Altcoin?**: Stands for "alternative coin", refers to other digital/crypto-currencies different from Bitcoin
-
-- There are more than **2100** different cryptocurrencies.
-
-Problems?
-
-+ _it lacks intrinsic value, long verification process of the transactions and high volatility._ (Yermack, 2013).
-
-+ _Bitcoin is a speculative asset_ (Baek &amp; Elbeck, 2014; Bartos, 2015; Bouoiyour &amp; Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
-
----
-
 ### Objectives
 
 + Determine which are the drivers that explain Bitcoin's price between January 2013 and May 2017
@@ -90,6 +71,25 @@ Problems?
 + Limited computational power
     + It is needed up to 2.5gb of RAM per model object
     + Estimation can take several hours
+
+---
+
+## Background
+
+- **What is Bitcoin?**: _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
+  - _... a set of technologies that established the framework to interchange money named bitcoins through a decentralized peer-to-peer network named Blockchain_ (Astonopoulos, 2014).
+
+- _“...a commodity money without gold, fiat money without state, and credit money without debt” _(Bjerg, 2016).
+
+- **What is an Altcoin?**: Stands for "alternative coin", refers to other digital/crypto-currencies different from Bitcoin
+
+- There are more than **2100** different cryptocurrencies.
+
+Problems?
+
++ _it lacks intrinsic value, long verification process of the transactions and high volatility._ (Yermack, 2013).
+
++ _Bitcoin is a speculative asset_ (Baek &amp; Elbeck, 2014; Bartos, 2015; Bouoiyour &amp; Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
 
 ---
 ## Data
@@ -118,9 +118,9 @@ External factors
   - Exchanges rate of the euro with the dollar (EURO-USD), dollar with the yuan (USD-YUAN)
 ---
 
-## Structural time series
+## Methodology
 
-&gt; A space state model consists of two equations, a measurement equation which links the observed variables to unobserved state variables and a transition equation which describes the dynamics of the state variables
+&gt; Structural time series (Space state model) consists of two equations: a measurement equation which links the observed variables to unobserved state variables and a transition equation which describes the dynamics of the state variables
 
 
 &amp;nbsp;
@@ -145,55 +145,37 @@ $$
 - `\(\varepsilon_t,\,\eta_t\)`: serially and mutually independent errors
 
 ---
-
-.pull-left[
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/drivers2.jpg" alt="Group of drivers" width="100%" /&gt;
-&lt;p class="caption"&gt;Group of drivers&lt;/p&gt;
-&lt;/div&gt;
-]
-
-.pull-right[
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/cluster_countries.png" alt="Clustered GSI by country" width="100%" /&gt;
-&lt;p class="caption"&gt;Clustered GSI by country&lt;/p&gt;
-&lt;/div&gt;
-]
-
-
----
 class: middle
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/dyncoef.png" alt="Time variant marginal posterior coefficient estimates for non-zero inclusion probability variables" width="70%" /&gt;
+&lt;img src="img/c1_time_variant_estimates.png" alt="Time variant marginal posterior coefficient estimates for non-zero inclusion probability variables" width="70%" /&gt;
 &lt;p class="caption"&gt;Time variant marginal posterior coefficient estimates for non-zero inclusion probability variables&lt;/p&gt;
 &lt;/div&gt;
 
 ---
-class: left, middle
 
-.pull-left[
-Findings:
-+ Search volume of Bitcoin is the strongest predictor of BTC's price
-+ Financial variables had little prediction power to explain BTC dynamics
-+ None of the internal factors have a relevant impact on the price
-]
+## Conclusions
 
-.pull-right[
-Lines of future work
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+&amp;nbsp;
+
+- Search volume of Bitcoin is the strongest predictor of BTC's price
+- Financial variables had little prediction power to explain BTC dynamics
+- None of the internal factors have a relevant impact on the price
+
+### Lines of future work
 - **Is Bitcoin a currency or an asset?**
 - **Is it a speculative bubble?**  
-]
-
-
 
 ---
-class: inverse, center, middle
+class: center, middle
 
-# Objectives
+## Chapter II - Investors’ biases and herding behavior in the cryptocurrency market.
 
 ---
-## Objectives
+### Objectives
 
 1. Characterize the cryptocurrency markets from a behavioral economics perspective
 --
@@ -205,7 +187,7 @@ class: inverse, center, middle
 
 --
 
-## Contribution
+### Contribution
 1. Literature relating behavioral economics and cryptocurrencies is barely existent yet
 --
 
@@ -213,16 +195,12 @@ class: inverse, center, middle
 
 --
 
-## Considerations
+### Considerations
 1. The ambiguity demands to assess certain assumptions
   1. For instance: irrationality is any deviation from the Efficient Market Hypothesis statements
 
 ---
-class: middle, inverse, center
-# Background
-
----
-
+## Background
 ### Currencies, investing or gambling?
 
 .pull-left[
@@ -237,14 +215,14 @@ class: middle, inverse, center
 - **Asset**
 
 &lt;div class="figure"&gt;
-&lt;img src="img/diag1.png" alt="Components of a typical asset vs cryptocurrencies" width="80%" /&gt;
+&lt;img src="img/c2_crypto_elements.png" alt="Components of a typical asset vs cryptocurrencies" width="80%" /&gt;
 &lt;p class="caption"&gt;Components of a typical asset vs cryptocurrencies&lt;/p&gt;
 &lt;/div&gt;
 ]
 
 ---
 
-## Searching for the parallelism: Efficient markets
+### Searching for the parallelism: Efficient markets
 
 - Current theoretical framework on financial economics assumes markets function **efficiently** &lt;sup&gt;1&lt;/sup&gt;
 --
@@ -265,7 +243,7 @@ class: middle, inverse, center
 ]
 
 ---
-## Searching for the parallelism: Behavioral economics
+### Searching for the parallelism: Behavioral economics
 
 **Controversy:**
 
@@ -290,16 +268,17 @@ class: middle, inverse, center
 
 
 .center[**Maybe cryptocurrencies?**]
+
 ---
 
-## Behavioral economics: The cryptocurrency case
+### Behavioral economics: The cryptocurrency case
 
 - Any disclosure evoking a "new economy" will always be an allure for people eager for profits.
 --
 
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/kindleberger.png" alt="Anatomy of bubbles" width="60%" /&gt;
+&lt;img src="img/c2_kindleberger_bubble.png" alt="Anatomy of bubbles" width="60%" /&gt;
 &lt;p class="caption"&gt;Anatomy of bubbles&lt;/p&gt;
 &lt;/div&gt;
 
@@ -322,7 +301,7 @@ class: middle, inverse, center
 
 ---
 
-## Behavioral economics: The cryptocurrency case
+### Behavioral economics: The cryptocurrency case
 &amp;nbsp;
 &amp;nbsp;
 &amp;nbsp;
@@ -352,7 +331,7 @@ Problems:
 
 ---
 
-## Behavioral economics: The cryptocurrency case
+### Behavioral economics: The cryptocurrency case
 
 Three essential group of biases that deserve special consideration to explain what happens in crypto-markets.
 
@@ -361,125 +340,7 @@ Three essential group of biases that deserve special consideration to explain wh
 1. Herding behavior
 
 ---
-class: center, middle, inverse
-# Related literature
-
----
-
-## Optimism and overconfidence &lt;sup&gt;1&lt;/sup&gt;
-
-+ People exhibit exacerbated trust on their own ability, knowledge, and skills
---
-
-+ Self-reliance on personal judgments entails
-    - miscalibration  
-    - over-precision  
-    - optimism  
-    - and overreaction to random events
---
-
-- Examples:
-    - **90% of Swedish car drivers considered themselves better than the median driver** (Svenson, 1981).
-    - People fail to assign probabilities and calibrate unexpected events. 
-        - When asked for 1% and 99% tails for inflation and exchange rates, the results found experts had **20% rate of "surprise" instead of the expected 2%** (Alpert &amp; Raiffa, 1982)
-
-.footnote[
-[1] See Barber and Odean 2013; Kahneman and Riepe, 1998; Barberis and Thaler, 2002; Alpert and Raiffa, 1982]
----
-
-## Optimism and overconfidence
-
-+ Crypto-investors can easily be overconfident of their capacity to invest in a market characterized by increasing trend and high returns
---
-
-+ Random events in one cryptocurrency are interpreted and extrapolated to other altcoins, **this might be the reason several cryptocurrencies are correlated**
-
---
-
-    
-.center[
-&lt;div class="figure"&gt;
-&lt;img src="img/bull.PNG" alt="Interpretation to random events" width="70%" /&gt;
-&lt;p class="caption"&gt;Interpretation to random events&lt;/p&gt;
-&lt;/div&gt;
-]
-
----
-
-## Information, interest, and social wisdom
-
-&gt; “A wealth of information creates a poverty of attention” (H. Simon)
-
-.center[
-&lt;div class="figure"&gt;
-&lt;img src="img/hits_btc_price.png" alt="Bitcoin price vs Google Search Index for &amp;quot;Bitcoin&amp;quot; interest" width="70%" /&gt;
-&lt;p class="caption"&gt;Bitcoin price vs Google Search Index for "Bitcoin" interest&lt;/p&gt;
-&lt;/div&gt;
-]
-
----
-
-## Information, public interest, and social wisdom
-
-### Characteristics:
-- In the information era, there is an **overload of data** that demands the creation of mechanisms to discern **which information is relevant and which is not.**
---
-
-- Humans have **limited computational capabilities** hence, the formation of **rules of thumb** usually takes place instead of coherent/rational reasoning according to each problem (see Bounded Rationality)
---
-
-- Cryptocurrencies' information is based on fairly diversified sources
-    - Whitepapers
-    - News, project websites, blogs, and social media.
-    - Presumed cryptocurrency’s experts declare higher prices predictions (anchoring prospects)
---
-- Reddit: Online forums
-    - The largest community on the Internet, with more than 600.000 subscribers
-    - Advice to buy and sell
-    - Investment in new altercoins
-    - Price pattern recognition
----
-
-## Information, public interest, and social wisdom
-
-- News media have incentives to broadcast hypes with the purpose of capturing the reader’s attention towards different issues, being crypto-markets one of many of them.
---
-
-- Specialized websites offer "social investing", that is, a system that automatically copies trades done by **experienced, professional and successful investors.**
-    - Paying a "success fee" as a reward
-    - &lt;span style="color:blue"&gt;Following others’ actions is precisely a clear contradiction to what EMH states about random investors’ decisions.&lt;/span&gt;
-
-.center[
-&lt;img src="img/all_ct.png" width="821" /&gt;
-]
-
----
-
-## Information, public interest, and social wisdom
-
-**Hypothesis?**
-
-- An active agent in the crypto marketplace may face:
-    - Uncertainty and inability to assess probabilities of events  
-    - Problems to decide accurately  
-    - Limitations to assess the degree of quality of announcements
---
-- **Is it possible to catch up with 2K+ cryptocurrencies and ~40 new ones per month?**&lt;sup&gt;1&lt;/sup&gt;
-    - In my opinion: **hardly**. &lt;span style="color:blue"&gt;Especially in the task of distinguishing between fake and true potential projects.&lt;/span&gt;
---
-
-&gt; Once people receive information, they have to discern if it is accurate or not, **but prices often react faster**, then, it is strategically convenient to **follow what others do**, but because it is unobserved, there are incentives to rely only on **price dynamics**.
-
-.footnote[
-[1] Almost 2100 by the first week of December 2018.
-]
----
-class: center, middle
-
-**"The less information you have, the stronger is your incentive to follow the consensus." (Graham, 1999)**
-
----
-## Herding behavior
+### Herding behavior
 
 **What is herding?**
 
@@ -507,7 +368,7 @@ class: center, middle
 
 ---
 
-## Herding behavior in crypto-markets
+### Herding behavior in crypto-markets
 
 **Characteristics:**
 
@@ -518,24 +379,7 @@ class: center, middle
 --
 
 + It is profitable to achieve the interest of a critical mass of users/investors that yield a higher market capitalization.
-
----
-
-## Herding behavior in crypto-markets: a beauty contest
-
-.pull-left[
-“…so that each competitor has to pick, **not those faces which he himself finds prettiest, but those which she thinks likeliest to catch the fancy of the other competitors**, all of whom are looking at the problem from the same point of view. **It is not a case of choosing those which, to the best of one's judgment, are really the prettiest, nor even those which average opinion genuinely thinks the prettiest**. We have reached the **third degree** where **we devote our intelligence to anticipating what average opinion expects the average opinion to be**. And there are some, **I believe, who practice the fourth, fifth and higher degrees.**” (Keynes, 1936)
-]
-
-.pull-right[
-.center[
-&lt;img src="img/beauty_contest.png" width="333" /&gt;
-]
-]
-
----
-
-## Herding behavior in crypto-markets: relevant literature
+--
 
 + De Long et al. (1990)  **noise trader**&lt;sup&gt;1&lt;/sup&gt; **misperceive expected returns** and **generate beliefs and heuristics to buy and sell following a simple feedback rule** -&gt; &lt;span style="color:blue"&gt; **Volatility** &lt;/span&gt;
 --
@@ -558,7 +402,7 @@ class: center, middle
 ]
 
 ---
-## Herding
+### Herding
 
 **What is the relationship between herding and speculative bubbles?**
 
@@ -579,9 +423,6 @@ class: center, middle
 
 .center[R/ Test for empirical herding are by construction imperfect but some approximation can be done]
 
----
-class: inverse, middle, center
-# Data, methodology, and model
 ---
 
 ## Data
@@ -605,67 +446,7 @@ $$
 
 ---
 
-## Methodology: Cross-Sectional Standard Deviation of Returns (CSSD)
-
-+ To date few methods have been developed to test for empirical herding under prices settings
-+ Crypto-market investors' decision are almost impossible to be measured directly, hence this study will follow prices as coordination mechanism.
-+ Christie and Huang (1995) methodology:
-   
-$$
-`\begin{align}
-CSSD_t=\sqrt{\frac{\sum_{c=1}^{n}(R_{c,t}-\bar{R}_{m,t})^2}{N-1}}
-\end{align}`
-$$
-
-`\(CSSD_t\)`: Cross Sectional Standard Deviation of Returns for time `\(t\)`  
-`\(\bar{R}_{m,t}\)`: Cross Sectional Average Return for market `\(m\)` across time `\(t\)`
---
-
-+ From Capital Asset Pricing Market (CAPM) the model CCK proved returns dispersion is an increasing and **linear** function of market returns.
---
-
-+ Basic idea: **if market participants tend to follow the consensus and ignore their own priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**
---
-
-+ The relation can become non-linearly increasing (adverse herding) or even decreasing (herding)
----
-
-## Methodology: Cross-Sectional Standard Deviation of Returns (CSSD)
-
-Empirical test based on squared dispersion:
-
-$$
-CSSD_t=\alpha+\beta^LD_t^L+\beta^UD_t^U+\varepsilon_t
-$$
-
-&amp;nbsp;
-with:
-
-`\(D_t^L=1\)`: if market return on day `\(t\)` lies in the extreme **lower** `\(\theta_l\)` tail of the distribution, or zero, otherwise  
-`\(D_t^U=1\)`: if market return on day `\(t\)` lies in the extreme **upper** `\(\theta_u\)` tail of the distribution, or zero, otherwise  
-
-`\(\beta^L\)` captures herding when extreme low returns occur  
-`\(\beta^U\)` captures herding when extreme high returns occur  
-`\(\theta_d\)`: could be `\(1\%\)` or `\(5\%\)` for `\(l\)` and `\(u\)`
-
---
- 
-
-Limitations:
-
-+ Too sensitive to outliers
-+ `\(\theta\)` limits are in large part subjective
-
----
-
-## Methodology: Cross-Sectional Absolute Deviation of Returns (CSAD)
-
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-
-Chang, Cheng, and Khorana (2000) proposed a modification of Christie and Huang (1995) original idea by taking absolute returns deviation instead of square deviations to calculate market dispersion.
+## Methodology
 
 Empirical test based on absolute dispersion:
 
@@ -681,16 +462,298 @@ $$
 + Solves the problem of subjective assign of thresholds
 + Less sensitive to outliers
 
+
+- Basic idea: **if market participants tend to follow the consensus and ignore their own priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**
+--
+
+- The relation can become non-linearly increasing (adverse herding) or even decreasing (herding)
+
+---
+### Specification to test herding behavior under asymmetric states
+
+$$
+`\begin{matrix}
+CSAD_{t,1}=\gamma_{0,1}+\gamma_{1,1} D\times \left|R_{m,t}\right|+\gamma_{2,1} (1-D)\times \left|R_{m,t}\right|+ \\
+\qquad \qquad D\times\gamma_{3,1} R_{m,t}^2+\gamma_{4,1} (1-D)\times R_{m,t}^2+\gamma_{4+k,1}CSAD_{t-k,1}+\varepsilon_{t,1} &amp; S_t=1\\
+CSAD_{t,2}=\gamma_{0,1}+\gamma_{1,2} D\times \left|R_{m,t}\right|+\gamma_{2,2} (1-D)\times \left|R_{m,t}\right|+ \\
+\qquad \qquad D\times\gamma_{3,2} R_{m,t}^2+\gamma_{4,2} (1-D)\times R_{m,t}^2+\gamma_{4+k,2}CSAD_{t-k,2}+\varepsilon_{t,2} &amp; S_t=2\\
+ \vdots &amp; \vdots \\
+CSAD_{t,i}=\gamma_{0,i}+\gamma_{1,i} D\times \left|R_{m,t}\right|+\gamma_{2,i} (1-D)\times \left|R_{m,t}\right|+ \\
+\qquad \qquad D\times\gamma_{3,i} R_{m,t}^2+\gamma_{4,i} (1-D)\times R_{m,t}^2+\gamma_{4+k,i}CSAD_{t-k,i}+\varepsilon_{t,i} &amp; S_t=i\\
+\end{matrix}`
+$$
+with:
+`\(\varepsilon_{t,i} \sim N(0,\sigma_{i}^2) \  for \ i=1,...,n\)`
+
++ Parameters `\(\gamma_r \  \ for\ \ r=1,...,4+k\)` and `\(\sigma^2_s\)` will be allowed to change
++ The model employed Newey and West (1987) variance estimator to produce consistent standard errors in the presence of autocorrelation and heteroscedasticity.
++ The number of "regimes" is chosen given Akaike Information Criteria (AIC)
++ Subjectivity exist into presenting an equilibrium between descriptive power and interpretability
+
+---
+#### Results | Herding under symmetric conditions
+
+&lt;img src="img/c2_three_regime_table_color.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c2_three_regime_estimate.png" alt="Regime switching smoothed probabilities and estimates under symmetric herding behavior" width="50%" /&gt;
+&lt;p class="caption"&gt;Regime switching smoothed probabilities and estimates under symmetric herding behavior&lt;/p&gt;
+&lt;/div&gt;
+
+---
+#### Results | Herding under asymmetric conditions
+
+&lt;img src="img/c2_four_regime_table_color.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c2_four_regime_estimate.png" alt="Behavior Regime switching smoothed probabilities and estimates under asymmetric herding behavior" width="50%" /&gt;
+&lt;p class="caption"&gt;Behavior Regime switching smoothed probabilities and estimates under asymmetric herding behavior&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+## Conclusion
+
+- This study examined herding behavior within the crypto-markets
+--
+
+- Behavioral economics provides seemly suitable insights to explain the crypto-market price dynamics
+--
+
+- Crypto-investors frequently follow the consensus under market stress situations.
+--
+
+- Under different market conditions, herding has been evidenced in increasing returns scenarios, while in decreasing periods the evidence was not overwhelming (HODL can be an actual strategy).
+--
+
+- Herding has been intensifying since 2016 and it got stronger during the last months of 2017. The boost of herding entails market fragility, this **could** be the reason that recently Bitcoin plummet under $4000.
+--
+
+- A market as an ambiguous as the cryptocurrencies is chaotic by construction (economically wise), without any guide that determines an objective valuation that anchors informed expectations, it is impossible to coordinate a large sum of bias-prone individuals. **Trust may not be enough.**
+
+---
+class: center, middle
+
+## Chapter III - Attention, meta-information and behavioral convergence in cryptocurrency markets: A SVAR analysis
+
+---
+
+## Objectives
+
+1. Integrate the insights from the 2 previous chapters.
+1. Propose a proxy to measure behavioral convergency in the cryptocurrency market.
+1. Approximate a causal interpretation on the relationship across the relevant elements of cryptomarket system.
+
+### Background
+
+1. Human beings have limited computational resources to undertake a decision-making task.
+1. Anomalies are far more common in cryptomarkets than in financial environments.
+1. Searching problem is solved by investing in attention-grabbing stocks.
+  1. Abnormal trading volume.
+  1. Extreme one day returns.
+1. Bitcoin plays a dual role, first it is an amalgam of a currency and an asset, and secondly as a meta-informational input to convey trust to the entire "cryptomarket".
+  1. Trust is a proxy for loss-aversions
+1. cues `\(\rightarrow\)` reaction `\(\rightarrow\)` strategy `\(\rightarrow\)` cues 
+
+---
+
+### Results | Shock from Bitcoin
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c3_irf_btc.png" alt="Cumulative IRF effect from Bitcoin's returns (BTC) to the rest of the variables in the system" width="70%" /&gt;
+&lt;p class="caption"&gt;Cumulative IRF effect from Bitcoin's returns (BTC) to the rest of the variables in the system&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Results | Shock from attention
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c3_irf_att.png" alt="Cumulative IRF effect from attention (ATT) to the rest of the variables in the system" width="70%" /&gt;
+&lt;p class="caption"&gt;Cumulative IRF effect from attention (ATT) to the rest of the variables in the system&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Results | Shock from uncertainty
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c3_irf_btcv.png" alt="Cumulative IRF effect from uncertainty (BTCv) to the rest of the variables in the system" width="70%" /&gt;
+&lt;p class="caption"&gt;Cumulative IRF effect from uncertainty (BTCv) to the rest of the variables in the system&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Results | Shock from herding index under decreasing states
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c3_irf_hind.png" alt="Cumulative IRF effect from herding index under decreasing states (HIND) to the rest of the variables in the system" width="70%" /&gt;
+&lt;p class="caption"&gt;Cumulative IRF effect from herding index under decreasing states (HIND) to the rest of the variables in the system&lt;/p&gt;
+&lt;/div&gt;
+
+---
+### Results | Shock from herding index under increasing states
+
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c3_irf_hinu.png" alt="Cumulative IRF effect from herding index under decreasing states (HINU) to the rest of the variables in the system" width="70%" /&gt;
+&lt;p class="caption"&gt;Cumulative IRF effect from herding index under decreasing states (HINU) to the rest of the variables in the system&lt;/p&gt;
+&lt;/div&gt;
+
+---
+
+## Conclusion
+
+
+
+
+---
+class: center, middle, inverse
+
+# Appendix
+
+
+---
+
+## Chapter I
+
+.pull-left[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c1_demand_drivers.jpg" alt="Group of drivers" width="100%" /&gt;
+&lt;p class="caption"&gt;Group of drivers&lt;/p&gt;
+&lt;/div&gt;
+]
+
+.pull-right[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="img/c1_cluster_countries.png" alt="Clustered GSI by country" width="100%" /&gt;
+&lt;p class="caption"&gt;Clustered GSI by country&lt;/p&gt;
+&lt;/div&gt;
+]
+
+
+## Chapter II
+
 ---
 class: center, middle
 
 &lt;div class="figure"&gt;
-&lt;img src="img/csad_returns.jpg" alt="Cryto-market: Median, Squared CSAD returns" width="50%" /&gt;
+&lt;img src="img/c2_csad_returns.png" alt="Cryto-market: Median, Squared CSAD returns" width="50%" /&gt;
 &lt;p class="caption"&gt;Cryto-market: Median, Squared CSAD returns&lt;/p&gt;
 &lt;/div&gt;
 
 ---
-## Model: Herding behavior
+
+### Optimism and overconfidence &lt;sup&gt;1&lt;/sup&gt;
+
++ People exhibit exacerbated trust on their own ability, knowledge, and skills
+--
+
++ Self-reliance on personal judgments entails
+    - miscalibration  
+    - over-precision  
+    - optimism  
+    - and overreaction to random events
+--
+
+- Examples:
+    - **90% of Swedish car drivers considered themselves better than the median driver** (Svenson, 1981).
+    - People fail to assign probabilities and calibrate unexpected events. 
+        - When asked for 1% and 99% tails for inflation and exchange rates, the results found experts had **20% rate of "surprise" instead of the expected 2%** (Alpert &amp; Raiffa, 1982)
+
+.footnote[
+[1] See Barber and Odean 2013; Kahneman and Riepe, 1998; Barberis and Thaler, 2002; Alpert and Raiffa, 1982]
+---
+
+### Optimism and overconfidence
+
++ Crypto-investors can easily be overconfident of their capacity to invest in a market characterized by increasing trend and high returns
+--
+
++ Random events in one cryptocurrency are interpreted and extrapolated to other altcoins, **this might be the reason several cryptocurrencies are correlated**
+
+--
+
+    
+.center[
+&lt;div class="figure"&gt;
+&lt;img src="img/c2_bearbull.PNG" alt="Interpretation to random events" width="70%" /&gt;
+&lt;p class="caption"&gt;Interpretation to random events&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+### Information, interest, and social wisdom
+
+&gt; “A wealth of information creates a poverty of attention” (H. Simon)
+
+.center[
+&lt;div class="figure"&gt;
+&lt;img src="img/c2_hits_btc.png" alt="Bitcoin price vs Google Search Index for &amp;quot;Bitcoin&amp;quot; interest" width="70%" /&gt;
+&lt;p class="caption"&gt;Bitcoin price vs Google Search Index for "Bitcoin" interest&lt;/p&gt;
+&lt;/div&gt;
+]
+
+---
+
+### Information, public interest, and social wisdom
+
+#### Characteristics:
+- In the information era, there is an **overload of data** that demands the creation of mechanisms to discern **which information is relevant and which is not.**
+--
+
+- Humans have **limited computational capabilities** hence, the formation of **rules of thumb** usually takes place instead of coherent/rational reasoning according to each problem (see Bounded Rationality)
+--
+
+- Cryptocurrencies' information is based on fairly diversified sources
+    - Whitepapers
+    - News, project websites, blogs, and social media.
+    - Presumed cryptocurrency’s experts declare higher prices predictions (anchoring prospects)
+--
+- Reddit: Online forums
+    - The largest community on the Internet, with more than 600.000 subscribers
+    - Advice to buy and sell
+    - Investment in new altercoins
+    - Price pattern recognition
+---
+
+#### Information, public interest, and social wisdom
+
+- News media have incentives to broadcast hypes with the purpose of capturing the reader’s attention towards different issues, being crypto-markets one of many of them.
+--
+
+- Specialized websites offer "social investing", that is, a system that automatically copies trades done by **experienced, professional and successful investors.**
+    - Paying a "success fee" as a reward
+    - &lt;span style="color:blue"&gt;Following others’ actions is precisely a clear contradiction to what EMH states about random investors’ decisions.&lt;/span&gt;
+
+.center[
+&lt;img src="img/c2_advice_services.png" width="821" /&gt;
+]
+
+---
+
+#### Information, public interest, and social wisdom
+
+**Hypothesis?**
+
+- An active agent in the crypto marketplace may face:
+    - Uncertainty and inability to assess probabilities of events  
+    - Problems to decide accurately  
+    - Limitations to assess the degree of quality of announcements
+--
+- **Is it possible to catch up with 2K+ cryptocurrencies and ~40 new ones per month?**&lt;sup&gt;1&lt;/sup&gt;
+    - In my opinion: **hardly**. &lt;span style="color:blue"&gt;Especially in the task of distinguishing between fake and true potential projects.&lt;/span&gt;
+--
+
+&gt; Once people receive information, they have to discern if it is accurate or not, **but prices often react faster**, then, it is strategically convenient to **follow what others do**, but because it is unobserved, there are incentives to rely only on **price dynamics**.
+
+[1] Almost 2100 by the first week of December 2018.
+
+---
+class: center, middle
+
+**"The less information you have, the stronger is your incentive to follow the consensus." (Graham, 1999)**
+
+---
+
+### Model: Herding behavior
 
 An empirical test based on absolute dispersion:
 
@@ -716,7 +779,7 @@ with:
 + The baseline in this model will be a rational model of asset returns, that is, a scenario in which crypto-investors do not follow the consensus.
 
 ---
-## Model: Herding behavior under asymmetric market states
+### Model: Herding behavior under asymmetric market states
 
 An empirical test based on absolute dispersion:
 
@@ -739,7 +802,7 @@ with:
 + `\(k\)`: AR(k) to dismiss lagged effects  
 
 ---
-## Model: Markov Regime-Switching model for herding behavior
+### Model: Markov Regime-Switching model for herding behavior
 
 A two-state MC can be described as:
 
@@ -761,162 +824,6 @@ where:
 - Herding behavior states are (likely):
     - Unobserved
     - Probabilistic
-    
----
-## Model: Markov Regime-Switching model for herding behavior
-**Herding behavior under asymmetric states**
-
-$$
-`\begin{matrix}
-CSAD_{t,1}=\gamma_{0,1}+\gamma_{1,1} D\times \left|R_{m,t}\right|+\gamma_{2,1} (1-D)\times \left|R_{m,t}\right|+ \\
-\qquad \qquad D\times\gamma_{3,1} R_{m,t}^2+\gamma_{4,1} (1-D)\times R_{m,t}^2+\gamma_{4+k,1}CSAD_{t-k,1}+\varepsilon_{t,1} &amp; S_t=1\\
-CSAD_{t,2}=\gamma_{0,1}+\gamma_{1,2} D\times \left|R_{m,t}\right|+\gamma_{2,2} (1-D)\times \left|R_{m,t}\right|+ \\
-\qquad \qquad D\times\gamma_{3,2} R_{m,t}^2+\gamma_{4,2} (1-D)\times R_{m,t}^2+\gamma_{4+k,2}CSAD_{t-k,2}+\varepsilon_{t,2} &amp; S_t=2\\
- \vdots &amp; \vdots \\
-CSAD_{t,i}=\gamma_{0,i}+\gamma_{1,i} D\times \left|R_{m,t}\right|+\gamma_{2,i} (1-D)\times \left|R_{m,t}\right|+ \\
-\qquad \qquad D\times\gamma_{3,i} R_{m,t}^2+\gamma_{4,i} (1-D)\times R_{m,t}^2+\gamma_{4+k,i}CSAD_{t-k,i}+\varepsilon_{t,i} &amp; S_t=i\\
-\end{matrix}`
-$$
-with:
-`\(\varepsilon_{t,i} \sim N(0,\sigma_{i}^2) \  for \ i=1,...,n\)`
-
-+ Parameters `\(\gamma_r \  \ for\ \ r=1,...,4+k\)` and `\(\sigma^2_s\)` will be allowed to change
-+ The model employed Newey and West (1987) variance estimator to produce consistent standard errors in the presence of autocorrelation and heteroscedasticity.
-+ The number of "regimes" is chosen given Akaike Information Criteria (AIC)
-+ Subjectivity exist into presenting an equilibrium between descriptive power and interpretability
-
----
-class: center, middle, inverse
-
-# Results
-
-
----
-class: middle
-
-.center[
-&lt;div class="figure"&gt;
-&lt;img src="img/reg1_woc.png" alt="Regression estimates of herding behavior under symmetric" width="70%" /&gt;
-&lt;p class="caption"&gt;Regression estimates of herding behavior under symmetric&lt;/p&gt;
-&lt;/div&gt;
-]
-
----
-class: middle, center
-
-#### Regime switching smoothed probabilities and estimates under symmetric herding behavior
-
-&lt;img src="img/reg1_wc.png" width="60%" style="display: block; margin: auto;" /&gt;
-
-&lt;img src="img/sp_reg_1.png" width="50%" style="display: block; margin: auto;" /&gt;
-
-
----
-class: middle, center
-
-&lt;div class="figure"&gt;
-&lt;img src="img/reg2_woc.png" alt="Regression estimates of herding behavior under asymmetric states" width="100%" /&gt;
-&lt;p class="caption"&gt;Regression estimates of herding behavior under asymmetric states&lt;/p&gt;
-&lt;/div&gt;
-
----
-class: middle
-#### Regime switching smoothed probabilities and estimates under asymmetric herding behavior
-
-&lt;img src="img/reg2_wc.png" width="70%" style="display: block; margin: auto;" /&gt;
-
-&lt;img src="img/sp_reg_2.png" width="50%" style="display: block; margin: auto;" /&gt;
-
----
-class: inverse, center, middle
-
-# Conclusion
-
-
----
-
-## Conclusion
-
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-&amp;nbsp;
-
-+ This study examined herding behavior within the crypto-markets
---
-
-+ Behavioral economics provides seemly suitable insights to explain the crypto-market price dynamics
---
-
-+ Crypto-investors frequently follow the consensus under market stress situations.
---
-
-+ Under different market conditions, herding has been evidenced in increasing returns scenarios, while in decreasing periods the evidence was not overwhelming (HODL can be an actual strategy).
---
-
-+ Herding has been intensifying since 2016 and it got stronger during the last months of 2017. The boost of herding entails market fragility, this **could** be the reason that recently Bitcoin plummet under $4000.
---
-
-+ A market as an ambiguous as the cryptocurrencies is chaotic by construction (economically wise), without any guide that determines an objective valuation that anchors informed expectations, it is impossible to coordinate a large sum of bias-prone individuals. **Trust may not be enough.**
-
----
-class: center, middle
-
-# Thanks!
-
-# Objectives
-
-1. Integrate the insights from the 2 previous chapters.
-1. Propose a proxy to measure behavioral convergency in the cryptocurrency market.
-1. Approximate a causal interpretation on the relationship across the relevant elements of cryptomarket system.
-
----
-
-# Background
-
-1. Human beings have limited computational resources to undertake a decision-making task.
-1. Anomalies are far more common in cryptomarkets than in financial environments.
-1. Searching problem is solved by investing in attention-grabbing stocks.
-  1. Abnormal trading volume.
-  1. Extreme one day returns.
-1. Bitcoin plays a dual role, first it is an amalgam of a currency and an asset, and secondly as a meta-informational input to convey trust to the entire "cryptomarket".
-  1. Trust is a proxy for loss-aversions
-1. cues `\(\rightarrow\)` reaction `\(\rightarrow\)` strategy `\(\rightarrow\)` cues 
-
----
-
-# Results
-
----
-
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/irf_btc.png" alt="Cumulative impulse response function (IRF) for VAR of Bitcoin's returns (BTC) to the rest of the variables in the system" width="90%" /&gt;
-&lt;p class="caption"&gt;Cumulative impulse response function (IRF) for VAR of Bitcoin's returns (BTC) to the rest of the variables in the system&lt;/p&gt;
-&lt;/div&gt;
-
----
-
-
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/irf_att.png" alt="Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system" width="90%" /&gt;
-&lt;p class="caption"&gt;Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system&lt;/p&gt;
-&lt;/div&gt;
-
----
-
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/irf_btcv.png" alt="Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system" width="90%" /&gt;
-&lt;p class="caption"&gt;Cumulative impulse response function (IRF) for VAR of attention (ATT) to the rest of the variables in the system&lt;/p&gt;
-&lt;/div&gt;
-
----
-
-&lt;img src="img/irf_hind.png" width="90%" style="display: block; margin: auto;" /&gt;
-
----
-
-&lt;img src="img/irf_hinu.png" width="90%" style="display: block; margin: auto;" /&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
