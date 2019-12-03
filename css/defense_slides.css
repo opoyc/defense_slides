@@ -64,6 +64,8 @@ th, td { padding: 5px; }
 
 .remark-slide-content h3 {
   font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 30px;
 }
 
 
@@ -153,6 +155,21 @@ li, p {
 .pr {
   float: right;
   width: 49%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+
+.p23 {
+  float: left;
+  width: 67%;
+  height: 98%;
+  vertical-align: middle;
+}
+
+.p12 {
+  float: right;
+  width: 32%;
   height: 98%;
   vertical-align: middle;
 }
