@@ -435,7 +435,7 @@ class: center, middle
 - cues `\(\rightarrow\)` reaction `\(\rightarrow\)` strategy `\(\rightarrow\)` cues 
 
 ---
-### Methodology
+### Methodology | Measures and system variables
 
 .pl[
 
@@ -485,12 +485,11 @@ Adjusted Google Search Index
 ]
 
 ---
-### Methodology | Vector Autoregressive system
+### Methodology | Structural Vector Autoregressive system
 
-#&amp;nbsp;&amp;nbsp;&amp;nbsp;
+&lt;!-- &amp;nbsp;&amp;nbsp;&amp;nbsp; --&gt;
 
 .pl[
-
 $$
 `\begin{aligned}
 trait^A_t=\gamma_{0,1}+\gamma_{1,1}trait^A_{t-1}+&amp;\dots+\gamma_{n,1}trait^A_{t-n}+ \\
@@ -499,54 +498,43 @@ trait^A_t=\gamma_{0,1}+\gamma_{1,1}trait^A_{t-1}+&amp;\dots+\gamma_{n,1}trait^A_
 trait^B_t=\gamma_{0,2}+\gamma_{1,2}trait^A_{t-1}+&amp;\dots+\gamma_{n,2}trait^A_{t-n}+ \\
 \phi_{1,2}trait^B_{t-1}+&amp;\dots+\phi_{n,2}trait^B_{t-n} +\\
 \theta_{1,2}trait^C_{t-1}+&amp;\dots+\theta_{n,2}trait^C_{t-n}+\dots+\varepsilon_{2,t} \\
-trait^C_t=\gamma_{0,3}+\gamma_{1,3}trait^A_{t-1}+&amp;\dots+\gamma_{n,3}trait^A_{t-n}+ \\
-\phi_{1,3}trait^B_{t-1}+&amp;\dots+\phi_{n,3}trait^B_{t-n} +\\
-\theta_{1,3}trait^C_{t-1}+&amp;\dots+\theta_{n,3}trait^C_{t-n}+\dots+\varepsilon_{3,t} \\
 \vdots
 \end{aligned}`
 $$
-
-
 &lt;div class="figure" style="text-align: center"&gt;
 &lt;img src="img/c3_wold_causal.png" alt="Ordering of the orthogonalized impulse-response function" width="70%" /&gt;
 &lt;p class="caption"&gt;Ordering of the orthogonalized impulse-response function&lt;/p&gt;
 &lt;/div&gt;
-
 ]
 
 .pr[
-
+- Wold Causality 
 
 ]
 
-&lt;!-- --- --&gt;
-&lt;!-- ### Results | Granger causality --&gt;
+&lt;!-- while the shaded vignette describes the coefficients confidence intervals --&gt;
+&lt;!-- as two standard errors, and confidence interval intersecting the red dashed line means the --&gt;
+&lt;!-- lack of statistical evidence in favor of bidirectional effect from the shock. --&gt;
 
-&lt;!-- .p23[ --&gt;
-&lt;!-- ```{r, echo=FALSE,fig.align="center", fig.cap="Granger-causality test for crypto-market system", out.width="90%"} --&gt;
-&lt;!-- knitr::include_graphics("img/c3_granger.png") --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- .p12[ --&gt;
-&lt;!-- - "Granger-causality" emphasize on the prediction power of a given (lagged) variable in comparison with an autoregressive term. It is actually a test for "precedence". --&gt;
-&lt;!-- - During 2014 up to 2017 it has been found that the behavioral converge  --&gt;
-&lt;!-- ] --&gt;
 
 ---
 ### Results | Shock from Bitcoin
 
 .p23[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/c3_irf_btc.png" alt="Cumulative IRF effect from Bitcoin's returns (BTC) to the rest of the variables in the system" width="100%" /&gt;
+&lt;img src="img/c3_irf_btc.png" alt="Cumulative IRF effect from Bitcoin's returns (BTC) to the rest of the variables in the system" width="90%" /&gt;
 &lt;p class="caption"&gt;Cumulative IRF effect from Bitcoin's returns (BTC) to the rest of the variables in the system&lt;/p&gt;
 &lt;/div&gt;
+- Bitcoin is more than an asset/currency, it also conveys trust on the whole market, i.e. if Bitcoin is doing good, that market is going well.
+- It defines strategy to follow, for instance, momentum trading.
 ]
 
 .p12[
-- Bitcoin is more than an asset/currency, it also conveys trust on the whole market, i.e. if Bitcoin is doing good, that market is going well.
-- It defines strategy to follow, for instance, momentum trading.
-
+- One shock from Bitcoin’s returns generates a short-term effect on the level of attention, which remains
+for several days, prices indeed react faster than revealed attention.
+- A positive shock in BTC returns is associated with a decrease in dispersion, but the effect cancels out quickly.
+- A shock of Bitcoin’s returns sends a signal to the participants to follow a momentum strategy and increasing their demand for other cryptocurrencies expecting to capture profits in the short term.
+- BTC returns sends a signal to the participants, then they react by following the consensus by demanding more of the any of the cryptocurrencies used to generate the index.
 ]
 
 ---
@@ -554,23 +542,17 @@ $$
 
 .p23[
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/c3_irf_att.png" alt="Cumulative IRF effect from attention (ATT) to the rest of the variables in the system" width="100%" /&gt;
+&lt;img src="img/c3_irf_att.png" alt="Cumulative IRF effect from attention (ATT) to the rest of the variables in the system" width="90%" /&gt;
 &lt;p class="caption"&gt;Cumulative IRF effect from attention (ATT) to the rest of the variables in the system&lt;/p&gt;
 &lt;/div&gt;
+- H: attention-grabbing events induces price pressure since investors respond to such shocks demanding more of a small set of stock that “glitter” among all.
+- Revealed attention is an approximation to the decision mechanism used by the newswatchers (Holt and Stein, 1999)
 ]
 
 .p12[
 
-]
-
----
-### Results | Shock from uncertainty
-
-.p23[
-&lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="img/c3_irf_btcv.png" alt="Cumulative IRF effect from uncertainty (BTCv) to the rest of the variables in the system" width="100%" /&gt;
-&lt;p class="caption"&gt;Cumulative IRF effect from uncertainty (BTCv) to the rest of the variables in the system&lt;/p&gt;
-&lt;/div&gt;
+- A shock from attention-grabbing index does not have an effect on BTC returns. Meaning that there is a directionality, and the fact that it is reve
+- it does affect in the short-term is the estimated volatility of Bitcoins’ returns, henceforth, one standard deviation impulse from ATT increases the dispersion of BTC up to 0.2 standard deviations at a horizon of 2 days, then it is adjusted quickly and shows a positive long-lasting response aroun
 ]
 
 ---
@@ -583,6 +565,14 @@ $$
 &lt;/div&gt;
 ]
 
+.p12[
+- Herding is not explicitly observable by investors.
+- Attention either manifested from cues-seekers and momentum traders’ agents, serve as drivers to decision-making, either to affect play a contrarian or herding role, and not otherwise. 
+- Shows that an impulse in herding under decreasing market states has no effect on ATT, however, it does have a significant response on Bitcoins’ returns, however, it is negligible around 0.004 standard deviations, and becoming non-significant from 4 days onward.
+- 
+]
+
+
 ---
 ### Results | Shock from herding index under increasing states
 
@@ -594,14 +584,18 @@ $$
 ]
 
 .p12[
-
+- HINU and HIND are underlying market behavior, hence there are not expected to affect
+the cues-seekers actions
+- The more the market coordinates their behavior, the less dispersion around the BTC price. The transmission of market wide uncertainty is passed to price returns.
+- 
 ]
 ---
 
 ## Conclusion
 
-
-
+- In the absence of cues on fundamentals, prices guides crypto-investors, therefore, there is little chance for the market to correct itself by the active participation of individuals if all form beliefs according to the positive feedback valuation only. 
+-  the absence of reliable signals, there is strong evidence of crypto-investors to resort to ignore their private information and follow the consensus.
+- Crypto-investors are highly adverse to losses, therefore they engage in trading strategies that emulate what the coordination mechanism conveys, generating a feedback loop represented by a strong probability of herding given that the previous state is herding as well, in other words, there is little chance of market correction, this is associated with unstable market conditions, failing to generate rational expectations, and prone to generate bubbles and fads as many other authors have expressed in other sectors.
 
 ---
 class: center, middle, inverse
