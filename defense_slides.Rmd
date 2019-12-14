@@ -62,15 +62,16 @@ class: center, middle
 ### Objectives
 
 - Review the economic literature about cryptocurrencies.
-- Define a set of potential drivers of Bitcoin price, that lets to: 
+- Explore the dynamics, and propose potential drivers of Bitcoin's price, that lets to:
   - Generate hypothesis.
-- Determine which are relevant social, financial and macroeconomic factors determine Bitcoin's price. That help to shed light about the scope and consequences for the economy. 
+  - Focus the attention on the relevant factors that are filtered according to their prediction power.
+  - Determine which are relevant factors/drivers that determine Bitcoin's price. Aiming to shed light on the scope and consequences for the economy.
 
 ### Contribution
 
 - Introduce an organized set of drivers, and how their relevancy is associated with different characteristics of Bitcoin.
 - A Spatio-temporal perspective of attraction, the most relevant predictor of BTC price.
-  - Bayesian variable selection of the drivers based on a data-driven approach known as Spike and Slab.
+- Bayesian variable selection to filter out variables following a data-driven approach known as Spike and Slab.
   
 ---
 ### Background
@@ -90,13 +91,11 @@ class: center, middle
 - _Bitcoin is a speculative asset_ (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
 
 ---
-### Literature
+### Background
 
 - Bitcoin volatility is a great limitation to meet the store of value function of money, moreover, it lacks intrinsic value, and the speed of transactions due to long verification process pose more limitations. Yermack (2013)
   - Regarding its use as a currency, it is tightly linked to the credibility and acceptance from users and merchants (Luther 2016).
 - Kristoufek (2015) opens the discussion of the duality property of Bitcoin (digital currency or speculative asset) by arguing that **“although the Bitcoin is usually considered a purely speculative asset, we find that standard fundamental factors -usage in trade, money supply, and price level-play a role in Bitcoin price over the long term.”**
-
-
 
 ---
 ### Data
