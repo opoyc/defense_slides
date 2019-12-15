@@ -155,10 +155,10 @@ knitr::include_graphics("img/c1_time_variant_estimates.png")
 ]
 
 .p12[
-- Internal drivers found to have no significance to explain Bitcoin.
-- Typically used financial-related variables like gold price, S&P500 and bilateral exchange rates are related to Bitcoin price, nonetheless, the had little prediction power to explain BTC dynamics.
+- Internal drivers (Blockchain statistics) found to have no significance to explain Bitcoin.
+- Financial-related variables like gold price, S&P500 and bilateral exchange rates are related to Bitcoin price, nonetheless, the had little prediction power.
   - Bitcoin's relationship is reasonably stronger with exchange rates than any other price driver studied.
-- There is a substantial difference both in the sign and behavior of time-variant coefficients over time of both bilateral exchange rates into consideration.
+- Attractiveness were found to be the most relevant variables related to the Bitcoin price. 
 ]
 
 ---
@@ -166,10 +166,9 @@ knitr::include_graphics("img/c1_time_variant_estimates.png")
 
 1. Bitcoin is represented by an amalgam of features and uses, which makes it difficult to frame it into a precedent element in economic studies.
   1. Its high volatility makes it an attractive product for risk-seekers' individuals.
-  1. It has been mentioned that Bitcoin's value and impact will depend greatly on the forces that drive the price since it exposes its application.
+  1. Bitcoin's impact will depend greatly on the forces that drive the price since it exposes its application.
 1. This study contributed to the discussion of Bitcoin price determinants by accounting internal and external factors.
   1. The results show that Bitcoin’s price has a small relationship with gold (negative), Yuan and US Dollar exchange rate (negative), S&P500 (negative). And a significantly higher association with different countries’ search trends.
-  1. Search volume or attraction from the public found to be the most relevant price driver. Other variables' effects found to be negligible.
 1. The future of any cryptocurrency is directly related to the credibility people assign to it, this, concerning its use as a currency, payment method or asset.
 
 #### Link to next chapter:
@@ -265,9 +264,9 @@ knitr::include_graphics("img/c2_kindleberger_bubble.png")
 
 Problems:
 
-- Most of the tests are designed to identify abnormal deviations from fundamentals
-- Fundamental valuation is arguably valid in cryptocurrencies
-- Speculative bubbles can only be determined *ex-post*
+- Most of the tests are designed to identify abnormal deviations from fundamentals.
+- Fundamental valuation is arguably valid in cryptocurrencies.
+- Speculative bubbles can only be determined *ex-post*.
 
 &nbsp;
 &nbsp;
@@ -283,7 +282,7 @@ Problems:
 
 - A process that stems when someone **choose to ignore her private information and instead jump to the bandwagon by mimicking the actions of individuals who acted previously**<sup>1</sup>
 - Herding or behavioral convergence entails the existence of a coordination mechanism (Devenow and Welch, 1996).
-  - Coordination/transmission mechanism can be indirect or direct signals
+  - Coordination/transmission mechanism can be indirect or direct signals.
   - Word-of-mouth, news and social media exposition, in-place observation, etc.
     - **First degree: Observe other's decision-makers**
     - **Second degree: Price movements**
@@ -301,9 +300,9 @@ Problems:
 - Shapiro & Varian (1999, 2004) stated that **old economy** differentiates from the **new economy** in the **substitution of economies of scale by the economics of networks**
 - It is profitable to achieve the interest of a critical mass of users/investors that yield a higher market capitalization.
 - De Long et al. (1990)  **noise trader**<sup>1</sup> **misperceive expected returns** and **generate beliefs and heuristics to buy and sell following a simple feedback rule** -> <span style="color:blue"> **Volatility** </span>
-- Scharfstein and Stein (1990) stated that within individual investment environments, **managers usually disregard private information by adopting a follow-the-crowd strategy**
+- Scharfstein and Stein (1990) stated that within individual investment environments, **managers usually disregard private information by adopting a follow-the-crowd strategy**.
 - **Limits of attention** increase the probability of herding due to the difficulty to accurately process information (Hirshleifer and Hong Teoh, 2003).
-- Welch (2000) found that **analysts herd in their stock recommendations**, exposing **significant positive correlation between adjacent analysts**
+- Welch (2000) found that **analysts herd in their stock recommendations**, exposing **significant positive correlation between adjacent analysts**.
 - Bikhchandani, Hirshleifer and Welch (1992) proved that herding <span style="color:blue">**explain conformity, fads, fashions, booms, and crashes**</span>
 
 .footnote[
@@ -364,10 +363,10 @@ $$
 - $CSAD_t$: Cross Sectional Absolute Deviations of Bitcoin' returns for time $t$  
 - $\bar{R}_{m,t}$: Cross Sectional **Median** Return for crypto-market portfolio $m$ across time $t$
 
-- Solves the problem of subjective assign of thresholds
-- Less sensitive to outliers
-- Basic idea: **if market participants tend to follow the consensus and ignore their priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**
-- The relation can become non-linearly increasing (adverse herding) or even decreasing (herding)
+- Solves the problem of subjective assign of thresholds.
+- Less sensitive to outliers.
+- Basic idea: **if market participants tend to follow the consensus and ignore their priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**.
+- The relation can become non-linearly increasing (adverse herding) or even decreasing (herding).
 
 ---
 ### Methodology | Specification
@@ -388,10 +387,10 @@ $$
 with:
 $\varepsilon_{t,i} \sim N(0,\sigma_{i}^2) \  for \ i=1,...,n$
 
-- Parameters $\gamma_r \  \ for\ \ r=1,...,4+k$ and $\sigma^2_s$ will be allowed to change
+- Parameters $\gamma_r \  \ for\ \ r=1,...,4+k$ and $\sigma^2_s$ will be allowed to change.
 - The model employed Newey and West (1987) variance estimator to produce consistent standard errors in the presence of autocorrelation and heteroscedasticity.
-- The number of "regimes" is chosen given Akaike Information Criteria (AIC)
-- Subjectivity exists into presenting an equilibrium between descriptive power and interpretability
+- The number of "regimes" is chosen given Akaike Information Criteria (AIC).
+- Subjectivity exists into presenting an equilibrium between descriptive power and interpretability.
 
 ---
 ### Results | Herding under symmetric conditions
