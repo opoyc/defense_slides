@@ -79,17 +79,22 @@ class: center, middle
 
 #### **What is Bitcoin?**
 
+- Officially, Bitcoin is a decentralized digital currency, that allow users to send bitcoins on a peer to peer network without intermediaries.
+
+However...
+
 - _"...it can be defined as a protocol, platform, currency or payment method"_ (Athey et al. 2016)
-- _"...a set of technologies that established the framework to interchange money named bitcoins through a decentralized peer-to-peer network named Blockchain_" (Astonopoulos, 2014).
 - _“...a commodity money without gold, fiat money without the state, and credit money without debt” _(Bjerg, 2016).
-- Kristoufek (2015) opens the discussion of the duality property of Bitcoin (digital currency or speculative asset) by arguing that **“although the Bitcoin is usually considered a purely speculative asset, we find that standard fundamental factors (usage in trade, money supply, and price level) play a role in Bitcoin price over the long term.”**
+- Kristoufek (2015) opens the discussion of the duality property of Bitcoin (digital currency or speculative asset).
+- In summary, its complexity makes it difficult to have a single definition that encompasses all uses.
 
 #### Disagreements and consensus
 
 - Bitcoin volatility is a great limitation to meet the store of value function of money.
-  - It lacks intrinsic value, and the speed of transactions due to long verification process. Yermack (2013)
   - Regarding its use as a currency, it is tightly linked to the credibility and acceptance from users and merchants (Luther 2016).
-- Bitcoin is a speculative asset (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
+- It lacks intrinsic value.
+- Low speed of transactions due to long verification process is disadvantage in front of typical mechanisms to change money.
+- **Bitcoin is a speculative asset** (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
 
 ---
 ### Data
@@ -155,18 +160,18 @@ knitr::include_graphics("img/c1_time_variant_estimates.png")
 ]
 
 .p12[
+- Attractiveness were found to be the most relevant variables related to the Bitcoin price. 
 - Internal drivers (Blockchain statistics) found to have no significance to explain Bitcoin.
 - Financial-related variables like gold price, S&P500 and bilateral exchange rates are related to Bitcoin price, nonetheless, the had little prediction power.
   - Bitcoin's relationship is reasonably stronger with exchange rates than any other price driver studied.
-- Attractiveness were found to be the most relevant variables related to the Bitcoin price. 
 ]
 
 ---
 ## Conclusions
 
 1. Bitcoin is represented by an amalgam of features and uses, which makes it difficult to frame it into a precedent element in economic studies.
-  1. Its high volatility makes it an attractive product for risk-seekers' individuals.
-  1. Bitcoin's impact will depend greatly on the forces that drive the price since it exposes its application.
+  1. Its high volatility makes it an attractive product for speculators.
+1. Bitcoin's impact will depend greatly on the forces that drive the price since it exposes its application.
 1. This study contributed to the discussion of Bitcoin price determinants by accounting internal and external factors.
   1. The results show that Bitcoin’s price has a small relationship with gold (negative), Yuan and US Dollar exchange rate (negative), S&P500 (negative). And a significantly higher association with different countries’ search trends.
 1. The future of any cryptocurrency is directly related to the credibility people assign to it, this, concerning its use as a currency, payment method or asset.
@@ -220,9 +225,7 @@ knitr::include_graphics("img/c2_crypto_elements.png")
 - By the late 1980s, there was a growing sense that some basic facts about financial markets were hard to reconcile with the traditional financial economics theory.
 - Shiller (1981) demonstrated that fluctuations in stock market prices are unlikely a result of a rational forecast of firms' future cash flows.
   - Several cases of "anomalies" were found
-  - Speculative bubbles
-    - Dot-com
-    - Black Monday
+  - Speculative bubbles: for instance, the Dot-com or Black Monday
 - The existence of several speculative bubbles episodes stimulated the research on behavioral economics applications to finance.
 - An important finding of recent years is that many of the patterns we observe in the stock market are also present in other asset classes.
   - Real state
