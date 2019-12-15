@@ -8,7 +8,7 @@ author: |
   UAB - Department of Applied Economics \
   \
   \
-  Updated: `r Sys.Date()`
+  2019-12-16
 output:
   xaringan::moon_reader:
     css:
