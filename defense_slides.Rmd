@@ -104,22 +104,21 @@ However...
 - Bitcoin price in levels
 
 **Independent variables:**
-  - Internal factors
-    - USD exchange trade volume
-    - Median confirmation time for a block to be accepted
-    - Hash rate that measures the power of miner’s machines.
-    - The number of transactions excluding the 100 most popular addresses.
-External factors
+- Internal factors
+  - USD exchange trade volume
+  - Median confirmation time for a block to be accepted
+  - Hash rate that measures the power of miner’s machines.
+  - The number of transactions excluding the 100 most popular addresses.
+- External factors
   - Attractiveness
-    - Google trends: Weekly search queries the index for “bitcoin” from 27 different countries.
-       - Varies across countries: Dynamic time warping dissimilarity algorithm
+      - Google trends: Weekly search queries the index for “bitcoin” from 27 different countries.
+      - Varies across countries: Dynamic time warping dissimilarity algorithm
   - Macro-financial
     - S&P500 index: Indicator of the performance of a group of relevant stock market companies
     - Chicago Board Options Exchange (CBOE) Volatility Index (VIX)
     - The bearish sentiment from the AAII Investor Sentiment Survey
     - Gold’s price
     - Exchanges rate of the euro with the dollar (EURO-USD), dollar with the yuan (USD-YUAN)
-
 ---
 
 ### Methodology
@@ -170,10 +169,8 @@ knitr::include_graphics("img/c1_time_variant_estimates.png")
 ## Conclusions
 
 1. Bitcoin is represented by an amalgam of features and uses, which makes it difficult to frame it into a precedent element in economic studies.
-  1. Its high volatility makes it an attractive product for speculators.
-1. Bitcoin's impact will depend greatly on the forces that drive the price since it exposes its application.
-1. This study contributed to the discussion of Bitcoin price determinants by accounting internal and external factors.
-  1. The results show that Bitcoin’s price has a small relationship with gold (negative), Yuan and US Dollar exchange rate (negative), S&P500 (negative). And a significantly higher association with different countries’ search trends.
+1. Its high volatility makes it an attractive product for speculators.
+1. The results show that Bitcoin’s price has a small relationship with gold (negative), Yuan and US Dollar exchange rate (negative), S&P500 (negative). And a significantly higher association with different countries’ search trends.
 1. The future of any cryptocurrency is directly related to the credibility people assign to it, this, concerning its use as a currency, payment method or asset.
 
 #### Link to next chapter:
@@ -300,13 +297,13 @@ Problems:
 **Characteristics:**
 
 - Social judgment is intrinsic to the cryptocurrency market since the valuation of any currency is contingent on the extension of the group that founds it valuable.
-- Shapiro & Varian (1999, 2004) stated that **old economy** differentiates from the **new economy** in the **substitution of economies of scale by the economics of networks**
-- It is profitable to achieve the interest of a critical mass of users/investors that yield a higher market capitalization.
-- De Long et al. (1990)  **noise trader**<sup>1</sup> **misperceive expected returns** and **generate beliefs and heuristics to buy and sell following a simple feedback rule** -> <span style="color:blue"> **Volatility** </span>
+  - It is profitable to achieve the interest of a critical mass of users/investors that yield a higher market capitalization.
 - Scharfstein and Stein (1990) stated that within individual investment environments, **managers usually disregard private information by adopting a follow-the-crowd strategy**.
 - **Limits of attention** increase the probability of herding due to the difficulty to accurately process information (Hirshleifer and Hong Teoh, 2003).
 - Welch (2000) found that **analysts herd in their stock recommendations**, exposing **significant positive correlation between adjacent analysts**.
 - Bikhchandani, Hirshleifer and Welch (1992) proved that herding <span style="color:blue">**explain conformity, fads, fashions, booms, and crashes**</span>
+  - De Long et al. (1990)  **noise trader**<sup>1</sup> **misperceive expected returns** and **generate beliefs and heuristics to buy and sell following a simple feedback rule** -> <span style="color:blue"> **Volatility** </span>
+
 
 .footnote[
 [1] Represents the irrational alter ego of sophisticated investors. Opposite of Information (Black, 1986)
@@ -319,7 +316,6 @@ Problems:
 
 **What is the relationship between herding and speculative bubbles?**
 
-- Sheds light on the fragility of the system in face of extreme price movements
 - Herding solely could not explain the presence of speculative bubbles, but it provides information about **crypto-market conformity dynamics** that entails **fragility** and **bubble susceptible** behavior
 
 .center[**Can herding be measured through prices?**]
@@ -338,7 +334,6 @@ Problems:
 - This study dampens the sample to the first 100 leading ones which in aggregated terms account for nearly 96% of total cryptocurrency’s (CC) market capitalization.
 - Data was scraped from [www.coinmarketcap.com]("www.coinmarketcap.com") website
 - Range of date varies between cryptocurrencies From 2013-04-01 to 2018-04-15
-- No distinction over categories
 
 $$
 \begin{align}
@@ -365,14 +360,11 @@ $$
 
 - $CSAD_t$: Cross Sectional Absolute Deviations of Bitcoin' returns for time $t$  
 - $\bar{R}_{m,t}$: Cross Sectional **Median** Return for crypto-market portfolio $m$ across time $t$
-
-- Solves the problem of subjective assign of thresholds.
-- Less sensitive to outliers.
 - Basic idea: **if market participants tend to follow the consensus and ignore their priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**.
-- The relation can become non-linearly increasing (adverse herding) or even decreasing (herding).
+  - The relation can become non-linearly increasing (adverse herding) or even decreasing (herding).
 
 ---
-### Methodology | Specification
+### Methodology | Initial specification
 
 &nbsp;&nbsp;&nbsp;
 
@@ -392,42 +384,46 @@ $\varepsilon_{t,i} \sim N(0,\sigma_{i}^2) \  for \ i=1,...,n$
 
 - Parameters $\gamma_r \  \ for\ \ r=1,...,4+k$ and $\sigma^2_s$ will be allowed to change.
 - The model employed Newey and West (1987) variance estimator to produce consistent standard errors in the presence of autocorrelation and heteroscedasticity.
+- The Markov Switching method captures shifts in behavior which are not observable.
+  - High-frequency data exhibits structural changes in their behavior associated with observed and unobserved events.
+  - **It is expected that herding display dynamics that are regime dependent, i.e. adverse herding (scattering) vs herding, and magnitude of herding-**
 - The number of "regimes" is chosen given Akaike Information Criteria (AIC).
-- Subjectivity exists into presenting an equilibrium between descriptive power and interpretability.
 
 ---
 ### Results | Herding under symmetric conditions
 
-.p23[
+.pl[
 ```{r, echo=FALSE, fig.align='center', out.width="90%"}
-knitr::include_graphics("img/c2_three_regime_table_color.png")
-```
-
-```{r, echo=FALSE, fig.align='center', out.width="70%"}
-knitr::include_graphics("img/c2_three_regime_estimate.png")
+#knitr::include_graphics("img/c2_three_regime_table_color.png")
+knitr::include_graphics("img/c2_spec_0.png")
 ```
 ]
 
-.p12[
-- The relevance of this result lies in the informational properties of crypto-markets. Agents might rely on current market conditions to define and shape the expected value of any cryptocurrency, prices are the coordination mechanism.
-- Crypto-investors behave in aggregate consensus in the existence of extreme market returns. 
-- Herding is ubiquitous to crypto-markets, but there is a visible stronger tendency to follow the consensus in comparison to adverse herding.]
+.pr[
+```{r, echo=FALSE, fig.align='center', out.width="100%"}
+#knitr::include_graphics("img/c2_three_regime_estimate.png")
+knitr::include_graphics("img/c2_spec_0_graph.png")
+```
 
+- The relevance of this result lies in the informational properties of crypto-markets. **Agents rely on current market conditions to define and shape the expected value of any cryptocurrency, prices are the coordination mechanism.**
+- Crypto-investors behave in aggregate consensus in the existence of extreme market returns. 
+- **Herding is ubiquitous to crypto-markets, but there is a visible stronger tendency to follow the consensus in comparison to adverse herding.**]
 
 ---
 ### Results | Herding under asymmetric conditions
 
-.p23[
-```{r, echo=FALSE, out.width="100%", fig.align='center'}
-knitr::include_graphics("img/c2_four_regime_table_color.png")
-```
-
-```{r, echo=FALSE, out.width="80%", fig.align='center'}
-knitr::include_graphics("img/c2_four_regime_estimate.png")
+.pl[
+```{r, echo=FALSE, out.width="90%", fig.align='center'}
+#knitr::include_graphics("img/c2_four_regime_table_color.png")
+knitr::include_graphics("img/c2_spec_1.png")
 ```
 ]
 
-.p12[
+.pr[
+```{r, echo=FALSE, out.width="100%", fig.align='center'}
+#knitr::include_graphics("img/c2_four_regime_estimate.png")
+knitr::include_graphics("img/c2_spec_1_graph.png")
+```
 - Crypto-investors herd in both directions; nonetheless, the magnitude in which they react to declining conditions is almost three times greater than what could be seen in increasing conditions. 
 - Crypto-investors seem to be affected by the likelihood of losing money, henceforth, they shape outweigh “bad news,” conveyed by a seemly declining evolution of the coordination mechanism.  ]
 
@@ -631,19 +627,24 @@ knitr::include_graphics("img/c3_irf_hinu.png")
 
 
 ---
-## Insights' summary
+### Insights' summary
 
 1. In a constantly changing environment that cryptocurrency exposes, it is highly important to introduce a dynamic analysis to understand and differentiate between perennial and long-lasting relationships. In that sense, this thesis emphasized into adopting such perspective.
+--
+
 1. Cryptocurrencies are practically isolated from the economy outside, namely financial and macroeconomic conditions. If so, any impact that might affect here will have little effect on the economy.
+--
+
 1. This thesis sheds light on the price-setting puzzle by attributing price movements to investors herding behavior, that is, a collective decision-making process in which prices “as is” are the coordination mechanism to investment decisions.
-1. Human beings and crypto-investors, in particular, have limited resources to process information and weak prior knowledge, as a consequence, they rely on other sources to form beliefs and expectations on crypto-markets.
   1. In the crypto market, this can trigger the formation of speculative bubbles.
-1. The current behavioral setting within the cryptocurrency market posits doubts about their use as a currency since volatility is a persistent trait.
-  1. High uncertainty makes difficult to determine buying/selling decisions.
-1. It has been proved that individuals herd in crypto markets which is an outstanding cast for inefficiency.
-  1. When there is no clear definition of the value of an asset, the current set of events could provoke instability.
+  1. The current behavioral setting within the cryptocurrency market posits doubts about their use as a currency since volatility is a persistent trait.
+--
+
 1. Crypto-market does follow a strong aggregate positive feedback strategy: there is a high likelihood that the next state will be strong herding as well, given that the previous exhibited the same. 
   1. This means that once there is evidence of people to ignore their own priors substantially, herding propagates in the market, which is unlikely to be corrected back to the “normal” state.
+--
+
+1. Bitcoin signal impacts attention, and not otherwise.
 
 ---
 class: inverse, center, middle
@@ -884,8 +885,7 @@ $p_{ij}$ transition probability of being at $j$ will only depend on the previous
 --
 
 - It is expected that herding display dynamics that are regime dependent
-    - Adverse herding vs herding
-    - Intensity of herding
+  - 1. Adverse herding vs herding 2. Intensity of herding
 --
 - Herding behavior states are (likely):
     - Unobserved
