@@ -70,7 +70,7 @@ class: center, middle
 ### Contribution
 
 - Introduce an organized set of drivers, and how their relevancy is associated with different characteristics of Bitcoin.
-- Employing the Bayesian State Space modelling to:
+- Employing the Bayesian State-Space modeling to:
   - A geographic and temporal perspective of interest on Bitcoin.
   - Perform variable selection to filter irrelevant variables.
   
@@ -79,7 +79,7 @@ class: center, middle
 
 #### **What is Bitcoin?**
 
-- Officially, Bitcoin is a decentralized digital currency, that allow users to send bitcoins on a peer to peer network without intermediaries.
+- Officially, Bitcoin is a decentralized digital currency, that allows users to send bitcoins on a peer to peer network without intermediaries.
 
 However...
 
@@ -91,9 +91,9 @@ However...
 #### Disagreements and consensus
 
 - Bitcoin volatility is a great limitation to meet the store of value function of money.
-  - Regarding its use as a currency, it is tightly linked to the credibility and acceptance from users and merchants (Luther 2016).
+  - Regarding its use as a currency, it is tightly linked to the credibility and acceptance of users and merchants (Luther 2016).
 - It lacks intrinsic value.
-- Low speed of transactions due to long verification process is disadvantage in front of typical mechanisms to change money.
+- The low speed of transactions due to a long verification process is a disadvantage in front of typical mechanisms to change money.
 - **Bitcoin is a speculative asset** (Baek & Elbeck, 2014; Bartos, 2015; Bouoiyour & Selmi, 2016ab; Bouri et al, 2017; Dyhrberg, 2016, among others)
 
 ---
@@ -159,7 +159,7 @@ knitr::include_graphics("img/c1_time_variant_estimates.png")
 ]
 
 .p12[
-- Attractiveness were found to be the most relevant variables related to the Bitcoin price. 
+- Attractiveness was found to be the most relevant variables related to the Bitcoin price. 
 - Internal drivers (Blockchain statistics) found to have no significance to explain Bitcoin.
 - Financial-related variables like gold price, S&P500 and bilateral exchange rates are related to Bitcoin price, nonetheless, the had little prediction power.
   - Bitcoin's relationship is reasonably stronger with exchange rates than any other price driver studied.
@@ -233,22 +233,18 @@ knitr::include_graphics("img/c2_crypto_elements.png")
 ---
 ### Background | Behavioral economics: The cryptocurrency case
 
+> Is a combination of two things people know the least: information technology and finance (not mine)
+
 - Any disclosure evoking a "new economy" will always be an allure for people eager for profits.
 
 ```{r, echo=F, fig.align='center', out.width="60%", fig.cap="Anatomy of bubbles"}
 knitr::include_graphics("img/c2_kindleberger_bubble.png")
 ```
 
-> Is a combination of two things people know the least: information technology and finance (not mine)
-
 - Behavioral economists advocates insist on the argument that crashes are determined endogenously by investor's actions.
     - Unexpected reactions
     - "Gut feeling"
     - Momentum investor
-
-- In **Chapter I** it has been found that the interest from the public had the highest prediction power.
-  - Social learning heuristics are intrinsic to crypto-markets.
-  - Crypto-investors' biases could be the reason for excessive volatility.
 
 ---
 ### Background | Behavioral economics: The cryptocurrency case
@@ -282,7 +278,7 @@ Problems:
 
 - A process that stems when someone **choose to ignore her private information and instead jump to the bandwagon by mimicking the actions of individuals who acted previously**<sup>1</sup>
 - Herding or behavioral convergence entails the existence of a coordination mechanism (Devenow and Welch, 1996).
-  - Coordination/transmission mechanism can be indirect or direct signals.
+  - The coordination/transmission mechanism can be indirect or direct signals.
   - Word-of-mouth, news and social media exposition, in-place observation, etc.
     - **First degree: Observe other's decision-makers**
     - **Second degree: Price movements**
@@ -358,8 +354,8 @@ CSAD_t=\frac{\sum_{i=1}^n \left | R_{c,t}-\bar{R}_{m,t} \right |}{N}
 \end{align}
 $$
 
-- $CSAD_t$: Cross Sectional Absolute Deviations of Bitcoin' returns for time $t$  
-- $\bar{R}_{m,t}$: Cross Sectional **Median** Return for crypto-market portfolio $m$ across time $t$
+- $CSAD_t$: Cross-Sectional Absolute Deviations of Bitcoin' returns for time $t$  
+- $\bar{R}_{m,t}$: Cross-Sectional **Median** Return for crypto-market portfolio $m$ across time $t$
 - Basic idea: **if market participants tend to follow the consensus and ignore their priors during periods of large price movements, then the linear and increasing relation between dispersion and market return will no longer hold**.
   - The relation can become non-linearly increasing (adverse herding) or even decreasing (herding).
 
@@ -387,7 +383,7 @@ $\varepsilon_{t,i} \sim N(0,\sigma_{i}^2) \  for \ i=1,...,n$
 - The Markov Switching method captures shifts in behavior which are not observable.
   - High-frequency data exhibits structural changes in their behavior associated with observed and unobserved events.
   - **It is expected that herding display dynamics that are regime dependent, i.e. adverse herding (scattering) vs herding, and magnitude of herding-**
-- The number of "regimes" is chosen given Akaike Information Criteria (AIC).
+- The number of "regimes" is chosen given the Akaike Information Criteria (AIC).
 
 ---
 ### Results | Herding under symmetric conditions
@@ -431,13 +427,11 @@ knitr::include_graphics("img/c2_spec_1_graph.png")
 
 ### Conclusions
 
-- Behavioral economics provides seemly suitable insights to explain crypto-market price dynamics.
-- The single most striking result of the research is that herding is not an unusual phenomenon or anomaly; instead, *herding is a regularity of the crypto-market*.
-  - Representing an opposite side to what a rational asset pricing establishes, that is, investors' following their private beliefs, and a random investing decision that is ultimately are corrected in the market,
-  - Crypto-investors frequently follow the consensus under market stress situations.
-  - Under different market conditions, herding has been evidenced in increasing returns scenarios, while in decreasing periods the evidence was not overwhelming (HODL can be an actual strategy).
-- Herding has been intensifying since 2016 and it got stronger during the last months of 2017. 
+- Behavioral economics is a suitable framework to explain crypto-market price dynamics.
+- The single most striking result of the research is that herding is not an unusual phenomenon or anomaly; instead, **herding is a regularity of the crypto-market**.
   - The boost of herding entails market fragility.
+  - Representing an opposite side to what a rational asset pricing establishes, that is, investors' following their private beliefs, and a random investing decision that is ultimately corrected in the market.
+- Agents converge in their decisions 3 times higher in magnitude when the market shows median negative returns, in comparison to positive returns.
 - A market as ambiguous as the cryptocurrencies is chaotic by construction, without any guide that determines an objective valuation that anchors informed expectations, it is impossible to coordinate a large sum of bias-prone individuals. **Trust may not be enough.**
 
 #### Link to next chapter:
@@ -567,7 +561,6 @@ knitr::include_graphics("img/c3_irf_btc.png")
 - One shock from Bitcoin’s returns generates a short-term effect on the level of attention, which remains
 for several days, prices indeed react faster than revealed attention.
 - A positive shock in BTC returns is associated with a decrease in dispersion, but the effect cancels out quickly.
-- A shock of Bitcoin’s returns sends a signal to the participants to follow a momentum strategy and increasing their demand for other cryptocurrencies expecting to capture profits in the short term.
 - BTC returns sends a signal to the participants, then they react by following the consensus by demanding more of the any of the cryptocurrencies used to generate the index.
 ]
 
@@ -583,7 +576,7 @@ knitr::include_graphics("img/c3_irf_att.png")
 ]
 
 .p12[
-- A shock from the attention-grabbing index does not affect BTC returns. Meaning that this relationship is directional.
+- A shock from the attention-grabbing index does not affect BTC returns. Meaning that this relationship is uni- directional.
 - Attention does affect the dispersion of the BTC horizon of 2 days, then it is adjusted quickly and shows a positive long-lasting response.
 ]
 
@@ -618,13 +611,12 @@ knitr::include_graphics("img/c3_irf_hinu.png")
 ]
 ---
 
-## Conclusion
+## Conclusions
 
 - The absence of reliable signals, there is strong evidence of crypto-investors to resort to ignore their private information and follow the consensus.
-- Crypto-investors are highly adverse to losses, therefore they engage in trading strategies that emulate what the coordination mechanism conveys, generating a feedback loop.
-- In the absence of cues on fundamentals, prices guides crypto-investors, therefore, there is little chance for the market to correct itself by the active participation of individuals if all form beliefs according to the positive feedback valuation only. 
-- There is little chance of market correction, this is associated with unstable market conditions, failing to generate rational expectations, and prone to generate bubbles and fads as many other authors have expressed in other sectors.
-
+- Revelead attention does not have an effect on BTC, but BTC does have a short effect on attention.
+- Bitcoin is a reference to take decisions in the whole market. If Bitcoin is doing good, the market is doing good, however, this mechanism creates fragility and foster uncertainty.
+- In the absence of cues on fundamentals, BTC returns guides crypto-investors, therefore, there is little chance for the market to correct itself by the active participation of individuals if all of them form beliefs according to the positive feedback valuation only.
 
 ---
 ### Insights' summary
@@ -644,7 +636,7 @@ knitr::include_graphics("img/c3_irf_hinu.png")
   1. This means that once there is evidence of people to ignore their own priors substantially, herding propagates in the market, which is unlikely to be corrected back to the “normal” state.
 --
 
-1. Bitcoin signal impacts attention, and not otherwise.
+1. The evidence suggests that it is unlikely that cryptocurrencies have a future to trade for goods and services. However, as many inventions of the information technology environment, they can evolve to solve other needs.
 
 ---
 class: inverse, center, middle
